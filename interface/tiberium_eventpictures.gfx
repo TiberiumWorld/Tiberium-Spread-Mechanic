@@ -1,0 +1,22 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_news_event_tiberium_crash"
+        texturefile = "gfx/event_pictures/news_event_tiberium_comet.dds"
+    }
+    spriteType = {
+        name = "GFX_news_event_tiberium_pod"
+        texturefile = "gfx/event_pictures/news_event_tiberium_pod.dds"
+    }
+    spriteType = {
+        name = "GFX_news_event_tiberium_pod_small"
+        texturefile = "gfx/event_pictures/news_event_tiberium_pod_small.dds"
+    }
+    spriteType = {
+        name = "GFX_news_event_tiberium_bridge"
+        texturefile = "gfx/event_pictures/news_event_tiberium_bridge.dds"
+    }
+    spriteType = {
+        name = "GFX_news_event_tiberium_flora"
+        texturefile = "gfx/event_pictures/news_event_tiberium_flora.dds"
+    }
+}

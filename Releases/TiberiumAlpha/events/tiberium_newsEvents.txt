@@ -1,0 +1,48 @@
+﻿
+add_namespace = tiberium_news
+
+news_event = {
+    id = tiberium_news.1
+    title = tiberium_news.1.t
+    desc = tiberium_news.1.desc
+    picture = GFX_news_event_tiberium
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    any_owned_state = { has_state_flag = init_tiberium_infestation_flag }
+                }
+                country_event = { id = tiberium_init.0 days = 18 }
+            }
+        }
+    }
+    
+    option = {
+        name = tiberium_news.1.a
+    }
+}
+
+news_event = {
+    id = tiberium_news.2
+    title = tiberium_news.2.t
+    desc = tiberium_news.2.desc
+    picture = GFX_news_event_tiberiumfull
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+    
+    immediate = {
+        set_country_flag = tiberium_infestation_full_flag
+        log = "[GetDateText]: [ROOT.GetName] succumb to Tiberium"
+    }
+
+    option = {
+        name = tiberium_news.2.a
+    }
+}

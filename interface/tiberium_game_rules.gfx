@@ -1,0 +1,14 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_init_icon"
+        texturefile = "gfx/game_rules/rule_astroid.dds"
+    }
+    SpriteType = {
+        name = "GFX_spread_icon"
+        texturefile = "gfx/game_rules/rule_spread.dds"
+    }
+    SpriteType = {
+        name = "GFX_growth_icon"
+        texturefile = "gfx/game_rules/rule_growth.dds"
+    }
+}

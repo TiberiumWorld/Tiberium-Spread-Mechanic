@@ -1,0 +1,23 @@
+﻿l_english:
+ TIB_RULE_GROUP_TIBERIUM_BEHAVIOR:0 "Tiberium Crystal Behavior"
+
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT:0 "Tiberium Arrival"
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_RANDOM:0 "Random"
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_RANDOM_DESC:0 "Tiberium Astroid will crash in to earth some day within a 25 year period; unknown when."
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_START:0 "Start"
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_START_DESC:0 "Tiberium Astroid will crash in to earth at start of the game."
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_DATE:0 "1995"
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_DATE_DESC:0 "Astroid will crash in to earth some day during 1995."
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_NEVER:0 "Never"
+ TIB_RULE_TIBERIUM_BEHAVIOR_INIT_NEVER_DESC:0 "There will be no astroid crashing in to earth."
+ 
+ TIB_RULE_TIBERIUM_BEHAVIOR_GROWTH:0 "Tiberium Growth Rate"
+ TIB_RULE_OPTION_NORMAL_GROWTH_DESC:0 "Rate of growth checks"
+
+ TIB_RULE_TIBERIUM_BEHAVIOR_SPREAD:0 "Tiberium Spread Rate"
+ TIB_RULE_OPTION_NORMAL_SPREAD_DESC:0 "Rate of spread checks"
+
+ TIB_RULE_OPTION_DAILY:0 "Daily"
+ TIB_RULE_OPTION_WEEKLY:0 "Weekly"
+ TIB_RULE_OPTION_MONTHLY:0 "Montly"
+ TIB_RULE_OPTION_NORMAL:0 "Normal"

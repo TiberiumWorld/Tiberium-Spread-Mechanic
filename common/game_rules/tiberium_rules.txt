@@ -1,0 +1,40 @@
+tiberium_rule_init = {
+    name = "TIB_RULE_TIBERIUM_BEHAVIOR_INIT"
+    group = "TIB_RULE_GROUP_TIBERIUM_BEHAVIOR"
+    icon = "GFX_init_icon"
+    option = {
+        name = "NEVER"
+        text = "TIB_RULE_TIBERIUM_BEHAVIOR_INIT_NEVER"
+        desc = "TIB_RULE_TIBERIUM_BEHAVIOR_INIT_NEVER_DESC"
+    }
+    default = {
+        name = "START"
+        text = "TIB_RULE_TIBERIUM_BEHAVIOR_INIT_START"
+        desc = "TIB_RULE_TIBERIUM_BEHAVIOR_INIT_START_DESC"
+    }
+    option = {
+        name = "RANDOM"
+        text = "TIB_RULE_TIBERIUM_BEHAVIOR_INIT_RANDOM"
+        desc = "TIB_RULE_TIBERIUM_BEHAVIOR_INIT_RANDOM_DESC"
+    }
+}
+tiberium_rule_growth = {
+    name = "TIB_RULE_TIBERIUM_BEHAVIOR_GROWTH"
+    group = "TIB_RULE_GROUP_TIBERIUM_BEHAVIOR"
+    icon = "GFX_growth_icon"
+    default = {
+        name = "NORMAL"
+        text = "TIB_RULE_OPTION_NORMAL"
+        desc = "TIB_RULE_OPTION_NORMAL_GROWTH_DESC"
+    }
+}
+tiberium_rule_spread = {
+    name = "TIB_RULE_TIBERIUM_BEHAVIOR_SPREAD"
+    group = "TIB_RULE_GROUP_TIBERIUM_BEHAVIOR"
+    icon = "GFX_spread_icon"
+    default = {
+        name = "NORMAL"
+        text = "TIB_RULE_OPTION_NORMAL"
+        desc = "TIB_RULE_OPTION_NORMAL_SPREAD_DESC"
+    }
+}

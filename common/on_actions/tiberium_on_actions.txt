@@ -1,0 +1,88 @@
+on_actions = {
+    on_monthly = {
+        effect = {
+            # Grow
+            if = {
+                limit = {
+                    has_game_rule = { rule = tiberium_rule_growth option = NORMAL }
+                    any_owned_state = {
+                        OR = { 
+                            has_state_flag = tiberium_infestation_0_flag
+                            has_state_flag = tiberium_infestation_1_flag
+                            has_state_flag = tiberium_infestation_2_flag
+                            has_state_flag = tiberium_infestation_3_flag
+                        }
+                    }
+                }
+                country_event = {id = tiberium_grow.0 days = 1 }
+            }
+            # Spread
+            if = {
+                limit = {
+                    has_game_rule = { rule = tiberium_rule_growth option = NORMAL }
+                    any_owned_state = {
+                        OR = { 
+                            has_state_flag = tiberium_infestation_0_flag
+                            has_state_flag = tiberium_infestation_1_flag
+                            has_state_flag = tiberium_infestation_2_flag
+                            has_state_flag = tiberium_infestation_3_flag
+                            has_state_flag = tiberium_infestation_4_flag
+                        }
+                    }
+                }
+                country_event = {id = tiberium_spread.0 days = 1 }
+            }
+
+            # Entire nation infected
+            if = {
+                limit = {
+                    NOT = { has_country_flag = tiberium_infestation_full_flag }
+                    all_owned_state = {
+                        AND = {
+                            OR = { 
+                                has_state_flag = tiberium_infestation_2_flag
+                                has_state_flag = tiberium_infestation_3_flag
+                                has_state_flag = tiberium_infestation_4_flag
+                            }
+                        }
+                    }
+                }
+                country_event = {id = tiberium_spread.1 days = 7 }
+            }
+        }
+    }
+
+    on_startup = {
+        effect = {
+            if = { # Tiberium Startup
+                limit = {
+                    has_game_rule = { rule = tiberium_rule_init option = START }
+                }
+                162 = {
+                    set_state_flag = init_tiberium_infestation_flag
+                }
+                every_country = {
+                    limit = { is_ai = no }
+                    news_event = { id = tiberium_init.0 days = 3 }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = { rule = tiberium_rule_init option = RANDOM }
+                }
+                162 = {
+                    set_state_flag = init_tiberium_infestation_flag
+                }
+                every_country = {
+                    limit = { is_ai = no }
+                    news_event = {
+                        id = tiberium_init.0
+                        days = 3
+                        random_days = 9125
+                        random = 48
+                    }
+                }
+            }
+        }
+    }
+}

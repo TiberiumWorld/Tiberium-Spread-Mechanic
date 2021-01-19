@@ -1,0 +1,9 @@
+tiberium_infestation = { #Used as National Spirit
+	enable = { always = yes }
+	local_resources = -0.3
+	local_non_core_manpower = -0.3
+	local_manpower = -0.3
+	local_factories = -0.3
+	local_building_slots_factor = -0.3
+	army_speed_factor_for_controller = -0.3
+}

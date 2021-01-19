@@ -1,0 +1,952 @@
+﻿
+add_namespace = tiberium_init
+add_namespace = tiberium_spread
+add_namespace = tiberium_grow
+
+news_event = {      # tiberium_init.0 // Astriod event
+    id = tiberium_init.0
+    title = tiberium_init.0.t
+    desc = tiberium_init.0.desc
+    picture = GFX_news_event_tiberium_crash
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        hidden_effect = {
+            news_event = { id = tiberium_init.1 days = 7 }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.0.a
+        goto_province = 3885
+    }
+}
+news_event = {      # tiberium_init.1 // Cristall event
+    id = tiberium_init.1
+    title = tiberium_init.1.t
+    desc = tiberium_init.1.desc
+    picture = GFX_news_event_tiberium_pod_small
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        hidden_effect = {
+            country_event = { id = tiberium_init.2 days = 8 }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.1.a
+    }
+}
+news_event = {      # tiberium_init.2 // Stange Vegitation event
+    id = tiberium_init.2
+    title = tiberium_init.2.t
+    desc = tiberium_init.2.desc
+    picture = GFX_news_event_tiberium_flora
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        hidden_effect = {
+            country_event = { id = tiberium_init.9 days = 7 }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.2.a
+    }
+}
+news_event = {      # tiberium_init.9 // Spread start event
+    id = tiberium_init.9
+    title = tiberium_init.9.t
+    desc = tiberium_init.9.desc
+    picture = GFX_news_event_tiberium_pod
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = yes
+
+    immediate = {
+        hidden_effect = {
+            162 = {
+                add_province_modifier = {
+                    static_modifiers = { tiberium_infestation_0 }
+                    province = {
+                        all_provinces = yes
+                    }
+                }
+                clr_state_flag = init_tiberium_infestation_flag
+                set_state_flag = tiberium_infestation_0_flag
+            }
+            IF = {
+                limit = {
+                    is_debug = yes
+                }
+                log = "[GetDateText]: [This.GetName]: Tiberium infestation started"
+            }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.9.a
+        add_stability = -0.05
+    }
+}
+
+country_event = {   # tiberium_grow.0
+    id = tiberium_grow.0
+    title = tiberium_grow.0.t
+    desc = tiberium_grow.0.desc
+    #picture = GFX_news_event_tiberium
+
+    is_triggered_only = yes
+    hidden = yes
+    fire_only_once = no
+
+    immediate = {
+        random_list = {
+            40 = {
+                every_owned_state = {
+                    limit = {
+                        has_state_flag = tiberium_infestation_3_flag
+                    }
+                    THIS = {
+                        remove_province_modifier = {
+                            static_modifiers = { tiberium_infestation_3 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        add_province_modifier = {
+                            static_modifiers = { tiberium_infestation_4 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        clr_state_flag = tiberium_infestation_3_flag
+                        set_state_flag = tiberium_infestation_4_flag
+                        IF = {
+                            limit = {
+                                is_debug = yes
+                            }
+                            log = "[GetDateText]: Tiberium grow to 4 in the state of [This.GetName] in [This.Owner.GetName]"
+                        }
+                    }
+                }
+                every_owned_state = {
+                    limit = {
+                        has_state_flag = tiberium_infestation_2_flag
+                    }
+                    THIS = {
+                        remove_province_modifier = {
+                            static_modifiers = { tiberium_infestation_2 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        add_province_modifier = {
+                            static_modifiers = { tiberium_infestation_3 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        clr_state_flag = tiberium_infestation_2_flag
+                        set_state_flag = tiberium_infestation_3_flag
+                        IF = {
+                            limit = {
+                                is_debug = yes
+                            }
+                            log = "[GetDateText]: Tiberium grow to 3 in the state of [This.GetName] in [This.Owner.GetName]"
+                        }
+                    }
+                }
+                every_owned_state = {
+                    limit = {
+                        has_state_flag = tiberium_infestation_1_flag
+                    }
+                    THIS = {
+                        remove_province_modifier = {
+                            static_modifiers = { tiberium_infestation_1 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        add_province_modifier = {
+                            static_modifiers = { tiberium_infestation_2 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        clr_state_flag = tiberium_infestation_1_flag
+                        set_state_flag = tiberium_infestation_2_flag
+                        IF = {
+                            limit = {
+                                is_debug = yes
+                            }
+                            log = "[GetDateText]: Tiberium grow to 2 in the state of [This.GetName] in [This.Owner.GetName]"
+                        }
+                    }
+                }
+                every_owned_state = {
+                    limit = {
+                        has_state_flag = tiberium_infestation_0_flag
+                    }
+                    THIS = {
+                        remove_province_modifier = {
+                            static_modifiers = { tiberium_infestation_0 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        add_province_modifier = {
+                            static_modifiers = { tiberium_infestation_1 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        clr_state_flag = tiberium_infestation_0_flag
+                        set_state_flag = tiberium_infestation_1_flag
+                        IF = {
+                            limit = {
+                                is_debug = yes
+                            }
+                            log = "[GetDateText]: Tiberium grow to 1 in the state of [This.GetName] in [This.Owner.GetName]"
+                        }
+                    }
+                }
+                # Damage structures
+                every_owned_state = {
+                    limit = {
+                        OR = {
+                            has_state_flag = tiberium_infestation_0_flag
+                            has_state_flag = tiberium_infestation_1_flag
+                            has_state_flag = tiberium_infestation_2_flag
+                            has_state_flag = tiberium_infestation_3_flag
+                        }
+                        NOT = {
+                            has_state_flag = tiberium_infestation_4_flag
+                        }
+                    }
+                    THIS = {
+                        damage_building = {
+                            type = infrastructure
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = arms_factory
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = industrial_complex
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = dockyard
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = air_base
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = naval_base
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = fuel_silo
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = rocket_site
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = synthetic_refinery
+                            damage = 0.20
+                        }
+                        damage_building = {
+                            type = nuclear_reactor
+                            damage = 0.20
+                        }
+                    }
+                }
+            }
+            60 = {}
+        }
+    }
+    
+    option = {
+        name = tiberium_grow.0.a
+    }
+}
+country_event = {   # tiberium_spread.0
+    id = tiberium_spread.0
+    title = tiberium_spread.0.t
+    desc = tiberium_spread.0.desc
+    #picture = GFX_news_event_tiberium
+
+    is_triggered_only = yes
+    hidden = yes
+    fire_only_once = no
+
+    immediate = {
+        random_list = {
+            40 = {
+                # Land spread
+                every_owned_state = {
+                    limit = {
+                        OR = {
+                            has_state_flag = tiberium_infestation_2_flag
+                            has_state_flag = tiberium_infestation_3_flag
+                            has_state_flag = tiberium_infestation_4_flag
+                        }
+                    }
+                    random_neighbor_state = {
+                        limit = {
+                            NOT = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_0_flag
+                                    has_state_flag = tiberium_infestation_1_flag
+                                    has_state_flag = tiberium_infestation_2_flag
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                        }
+                        add_province_modifier = {
+                            static_modifiers = { tiberium_infestation_0 }
+                            province = {
+                                all_provinces = yes
+                            }
+                        }
+                        add_state_modifier = {
+                            modifier = {
+                                recruitable_population = -1.00
+                            }
+                        }
+                        set_state_flag = tiberium_infestation_0_flag
+                        IF = {
+                            limit = {
+                                is_debug = yes
+                            }
+                            log = "[GetDateText]: Tiberium spread via land to the state of [This.GetName] in [This.Owner.GetName]"
+                        }
+                    }
+                    add_dynamic_modifier = { modifier = tiberium_infestation } 
+                }
+                
+                ## # Cross world spread
+
+                # Italy to Sardinia
+                IF = {
+                    limit = {
+                        AND = {
+                            2 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                1 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                                114 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        20 = {
+                            1 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }        
+                        }
+                        20 = {
+                            114 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                            
+                            
+                        }
+                        60 = {
+                        }
+                    }
+                }
+                # Sicily to Africa
+                IF = {
+                    limit = {
+                        AND = {
+                            115 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                448 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                                458 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        30 = {
+                            448 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                            458 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        70 = {
+                        }
+                    }
+                }
+                # Greece to Crete
+                IF = {
+                    limit = {
+                        AND = {
+                            186 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                182 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        40 = {
+                            182 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }        
+                        }
+                        60 = {}
+                    }
+                }
+
+                # Franche to England
+                IF = {
+                    limit = {
+                        AND = {
+                            6 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            14 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            15 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            29 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                123 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                                127 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        20 = {
+                            123 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        20 = {
+                            127 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        60 = {
+                        }
+                    }
+                }
+                # Scotland to Ireland
+                IF = {
+                    limit = {
+                        AND = {
+                            133 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                119 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        40 = {
+                            119 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        60 = {
+                        }
+                    }
+                }
+                # Spain to Africa
+                IF = {
+                    limit = {
+                        AND = {
+                            118 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                290 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        40 = {
+                            290 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        60 = {
+                        }
+                    }
+                }
+                # Europe to Americas
+                IF = {
+                    limit = {
+                        AND = {
+                            14 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            19 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            171 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            112 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            179 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                366 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                                310 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                                498 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        7 = {
+                            366 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        7 = {
+                            310 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        7 = {
+                            498 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        79 = {
+                        }
+                    }
+                }
+
+                # Russia to Japan
+                IF = {
+                    limit = {
+                        AND = {
+                            537 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                536 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        30 = {
+                            536 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        70 = {
+                        }
+                    }
+                }
+                # Korea to Japan
+                IF = {
+                    limit = {
+                        AND = {
+                            525 = {
+                                OR = {
+                                    has_state_flag = tiberium_infestation_3_flag
+                                    has_state_flag = tiberium_infestation_4_flag
+                                }
+                            }
+                            AND = {
+                                528 = {
+                                    NOT = { has_state_flag = tiberium_infestation_0_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_1_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_2_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_3_flag }
+                                    NOT = { has_state_flag = tiberium_infestation_4_flag }
+                                }
+                            }
+                        }
+                    }
+                    random_list = {
+                        30 = {
+                            528 = {
+                                set_state_flag = tiberium_infestation_0_flag
+                                add_province_modifier = {
+                                    static_modifiers = { tiberium_infestation_0 }
+                                    province = {
+                                        all_provinces = yes
+                                    }
+                                }
+                                IF = {
+                                    limit = {
+                                        is_debug = yes
+                                    }
+                                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                                }
+                            }
+                        }
+                        70 = {
+                        }
+                    }
+                }
+            }
+            60 = {}
+        }
+    }
+    
+    option = {
+        name = tiberium_spread.0.a
+    }
+}
+
+country_event = {   # tiberium_spread.1 // Nation has fully fallen to Tiberium
+    id = tiberium_spread.1
+    title = tiberium_spread.1.t
+    desc = tiberium_spread.1.desc
+    #picture = GFX_news_event_tiberium_bridge
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        set_country_flag = tiberium_infestation_full_flag
+
+        every_country = {
+            news_event = { id = tiberium_spread.1 days = 3 }
+        }
+        IF = {
+            limit = {
+                is_debug = yes
+            }
+            log = "[GetDateText]: [FROM.GetName] Succumb to Tiberium"
+        }
+    }
+    
+    option = {
+        name = tiberium_spread.1.a
+    }
+}
+news_event = {      # tiberium_spread.2 // A nation succum to tiberium!
+    id = tiberium_spread.2
+    title = tiberium_spread.2.t
+    desc = tiberium_spread.2.desc
+    picture = GFX_news_event_tiberium_bridge
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+    
+    immediate = {
+    }
+
+    option = {
+        name = tiberium_spread.2.a
+    }
+}
