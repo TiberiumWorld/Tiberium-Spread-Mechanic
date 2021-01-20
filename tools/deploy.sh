@@ -28,6 +28,7 @@ for filePath in $(find); do
     # Directories
     if [[ "$(echo "$filePath" | awk -F "/" '{print $2}')" == "." ]]; then continue; fi;
     if [[ "$(echo "$filePath" | awk -F "/" '{print $2}')" == ".git" ]]; then continue; fi;
+    if [[ "$(echo "$filePath" | awk -F "/" '{print $2}')" == ".github" ]]; then continue; fi;
     if [[ "$(echo "$filePath" | awk -F "/" '{print $2}')" == "release" ]]; then continue; fi;
     if [[ "$(echo "$filePath" | awk -F "/" '{print $2}')" == "tools" ]]; then continue; fi;
     if [[ "$(echo "$filePath" | awk -F "/" '{print $2}')" == "resources" ]]; then continue; fi;
