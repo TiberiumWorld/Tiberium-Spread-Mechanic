@@ -4,8 +4,8 @@
  <a href="https://github.com/TiberiumWorld/Tiberium-Mechanic/tags"><img src="https://img.shields.io/github/tag/TiberiumWorld/Tiberium-Mechanic.svg?style=for-the-badge&colorB=df2d00&label=Latest%20Tag" alt="Dev-build or the latest tag of the current build."></a><br>
  <a href="https://github.com/TiberiumWorld/Tiberium-Mechanic/releases/latest"><img src="https://img.shields.io/github/downloads/TiberiumWorld/Tiberium-Mechanic/total.svg?style=for-the-badge&label=Downloads" alt="Tiberium-Mechanic Downloads"></a>
  <a href="https://github.com/TiberiumWorld/Tiberium-Mechanic/issues"><img src="https://img.shields.io/github/issues-raw/TiberiumWorld/Tiberium-Mechanic.svg?style=for-the-badge&label=Issues" alt="Tiberium-Mechanic Issues"></a>
- <a href="https://discord.gg/frDEmchRQx"><img src="https://img.shields.io/badge/Discord-Join-lightgrey.svg?logo=Discord&style=for-the-badge" alt="Join Our Discord"></a>
- <a href="https://github.com/TiberiumWorld/Tiberium-Mechanic/projects/1"><img src="https://img.shields.io/badge/Roadmap-Plans-blue.svg?style=for-the-badge" alt="Join Our Discord"></a>
+ <a href="https://discord.gg/frDEmchRQx"><img src="https://img.shields.io/badge/Discord-Join-blue.svg?logo=Discord&style=for-the-badge" alt="Join Our Discord"></a>
+ <a href="https://github.com/TiberiumWorld/Tiberium-Mechanic/projects/1#column-12546832"><img src="https://img.shields.io/badge/Roadmap-Plans-yellow.svg?style=for-the-badge" alt="Join Our Discord"></a>
 </p>
 
 # Tiberium Mechanic
