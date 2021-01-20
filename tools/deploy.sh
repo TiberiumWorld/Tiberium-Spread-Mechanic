@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e 
+
 VERSION_TAG=$*
 if [ "$VERSION_TAG" == "" ]; then
     VERSION_TAG="0.0.0"
