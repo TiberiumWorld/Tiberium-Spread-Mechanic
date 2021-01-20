@@ -9,3 +9,5 @@
 
 # Tiberium Mechanic
 Tiberium mechanic are a moduel based tiberium spread system built to be exported and made compatible to other mods. The mod work out of the box for the vanilla experience.
+
+The mod is based on EA C&C Tiberium Universe Content
