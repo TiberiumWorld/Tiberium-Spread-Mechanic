@@ -1,9 +1,50 @@
-tiberium_infestation = { #Used as National Spirit
-	enable = { always = yes }
-	local_resources = -0.3
-	local_non_core_manpower = -0.3
+tiberium_infestation_state_0 = {
+	enable = { has_state_flag = tiberium_infestation_0_flag }
 	local_manpower = -0.3
+	local_non_core_manpower = -0.3
+	recruitable_population_factor = -0.3
 	local_factories = -0.3
 	local_building_slots_factor = -0.3
 	army_speed_factor_for_controller = -0.3
+	local_resources = -0.3
+}
+tiberium_infestation_state_1 = {
+	enable = { has_state_flag = tiberium_infestation_1_flag }
+	local_manpower = -0.5
+	local_non_core_manpower = -0.5
+	recruitable_population_factor = -0.5
+	local_factories = -0.5
+	local_building_slots_factor = -0.5
+	army_speed_factor_for_controller = -0.5
+	local_resources = -0.5
+}
+tiberium_infestation_state_2 = {
+	enable = { has_state_flag = tiberium_infestation_2_flag }
+	local_manpower = -0.7
+	local_non_core_manpower = -0.7
+	recruitable_population_factor = -0.7
+	local_factories = -0.7
+	local_building_slots_factor = -0.7
+	army_speed_factor_for_controller = -0.7
+	local_resources = -0.7
+}
+tiberium_infestation_state_3 = {
+	enable = { has_state_flag = tiberium_infestation_3_flag }
+	local_manpower = -0.85
+	local_non_core_manpower = -0.85
+	recruitable_population_factor = -0.85
+	local_factories = -0.85
+	local_building_slots_factor = -0.85
+	army_speed_factor_for_controller = -0.85
+	local_resources = -0.85
+}
+tiberium_infestation_state_4 = {
+	enable = { has_state_flag = tiberium_infestation_4_flag }
+	local_manpower = -1.0
+	local_non_core_manpower = -1.0
+	recruitable_population_factor = -1.0
+	local_factories = -1.0
+	local_building_slots_factor = -1.0
+	army_speed_factor_for_controller = -1.0
+	local_resources = -1.0
 }

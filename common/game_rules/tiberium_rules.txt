@@ -22,19 +22,49 @@ tiberium_rule_growth = {
     name = "TIB_RULE_TIBERIUM_BEHAVIOR_GROWTH"
     group = "TIB_RULE_GROUP_TIBERIUM_BEHAVIOR"
     icon = "GFX_growth_icon"
+    option = {
+        name = "LOW"
+        text = "TIB_RULE_OPTION_LOW"
+        desc = "TIB_RULE_OPTION_LOW_GROWTH_DESC"
+    }
     default = {
         name = "NORMAL"
         text = "TIB_RULE_OPTION_NORMAL"
         desc = "TIB_RULE_OPTION_NORMAL_GROWTH_DESC"
+    }
+    option = {
+        name = "HIGH"
+        text = "TIB_RULE_OPTION_HIGH"
+        desc = "TIB_RULE_OPTION_HIGH_GROWTH_DESC"
+    }
+    option = {
+        name = "EXTREAM"
+        text = "TIB_RULE_OPTION_EXTREAM"
+        desc = "TIB_RULE_OPTION_EXTREAM_GROWTH_DESC"
     }
 }
 tiberium_rule_spread = {
     name = "TIB_RULE_TIBERIUM_BEHAVIOR_SPREAD"
     group = "TIB_RULE_GROUP_TIBERIUM_BEHAVIOR"
     icon = "GFX_spread_icon"
+    option = {
+        name = "LOW"
+        text = "TIB_RULE_OPTION_LOW"
+        desc = "TIB_RULE_OPTION_LOW_SPREAD_DESC"
+    }
     default = {
         name = "NORMAL"
         text = "TIB_RULE_OPTION_NORMAL"
         desc = "TIB_RULE_OPTION_NORMAL_SPREAD_DESC"
+    }
+    option = {
+        name = "HIGH"
+        text = "TIB_RULE_OPTION_HIGH"
+        desc = "TIB_RULE_OPTION_HIGH_SPREAD_DESC"
+    }
+    option = {
+        name = "EXTREAM"
+        text = "TIB_RULE_OPTION_EXTREAM"
+        desc = "TIB_RULE_OPTION_EXTREAM_SPREAD_DESC"
     }
 }

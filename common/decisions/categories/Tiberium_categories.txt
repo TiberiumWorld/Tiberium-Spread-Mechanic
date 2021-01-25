@@ -1,13 +1,16 @@
 tiberium_decisions = {
 	icon = generic_research
 	visible = {
-		any_owned_state = {
-			OR = { 
-				has_state_flag = tiberium_infestation_0_flag
-				has_state_flag = tiberium_infestation_1_flag
-				has_state_flag = tiberium_infestation_2_flag
-				has_state_flag = tiberium_infestation_3_flag
-				has_state_flag = tiberium_infestation_4_flag
+		OR = {
+			is_debug = yes
+			any_owned_state = {
+				OR = { 
+					has_state_flag = tiberium_infestation_0_flag
+					has_state_flag = tiberium_infestation_1_flag
+					has_state_flag = tiberium_infestation_2_flag
+					has_state_flag = tiberium_infestation_3_flag
+					has_state_flag = tiberium_infestation_4_flag
+				}
 			}
 		}
 	}
