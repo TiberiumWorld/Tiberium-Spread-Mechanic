@@ -8,7 +8,8 @@
  <a href="https://github.com/TiberiumWorld/Tiberium-Mechanic/projects/1#column-12546832"><img src="https://img.shields.io/badge/Roadmap-Plans-yellow.svg?style=for-the-badge" alt="Join Our Discord"></a>
 </p>
 
-# Tiberium Mechanic
-Tiberium mechanic are a moduel based tiberium spread system built to be exported and made compatible to other mods. The mod work out of the box for the vanilla experience.
+# Tiberium Spread Mechanic
+Tiberium is a crystal that suck up minerals and nutrients from the ground like a sponge. They alter the terrain and make it inhospitable for carbon-based life. This is represented in game via terrain province and state modifiers.
 
-The mod is based on EA C&C Tiberium Universe Content
+# About
+Tiberium Spread Mechanic are a open source tiberium spread system built to be exported used and easily implemented to other mods. The mod works out of the box with the vanilla base game but might need some minor adjustments when used with mods changing UI and Province ID’s.

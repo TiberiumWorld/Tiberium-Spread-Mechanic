@@ -45,7 +45,10 @@ for filePath in $(find); do
 
 done
 
+
 echo "Setting up documents..."
+
+echo "./thumbnail.png" | cpio -p release/$modname/ >/dev/null 2>&1
 
 sed -i "s/0.0.0/$VERSION_TAG/g" release/$modname/descriptor.mod
 sed -i "s/DevBuild/$VERSION_TAG/g" release/$modname/descriptor.mod
@@ -54,8 +57,10 @@ sed -i "s/0.0.0/$VERSION_TAG/g" release/$modname/Tiberium.mod
 sed -i "s/path=\"mod\/Tiberium_DevBuild\"/path=\"mod\/Tiberium\"/g" release/$modname/Tiberium.mod
 sed -i "s/DevBuild/$VERSION_TAG/g" release/$modname/Tiberium.mod
 
-sed -i 's/<p[^P]*p>//g' release/$modname/README.md
+sed -i "s/# Tiberium Spread Mechanic/# Tiberium Spread Mechanic $VERSION_TAG/g" release/$modname/README.md
+cat release/$modname/README.md | sed -i '/<p/{:a;N;/p>/!ba};//d' release/$modname/README.md
 
+echo "Creating Release..."
 cd release
 [[ -f $modname-$VERSION_TAG.zip ]] && rm $modname-$VERSION_TAG.zip
 mv $modname/Tiberium.mod Tiberium.mod
