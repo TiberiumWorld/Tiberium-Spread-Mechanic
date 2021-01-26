@@ -130,7 +130,6 @@ on_actions = {
                     set_state_flag = init_tiberium_infestation_flag
                 }
                 ITA = {
-                    limit = { is_ai = no }
                     news_event = { id = tiberium_init.0 days = 3 }
                 }
             }
