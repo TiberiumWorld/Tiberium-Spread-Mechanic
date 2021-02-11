@@ -76,22 +76,10 @@ news_event = {      # tiberium_init.9 // Spread start event
 
     immediate = {
         hidden_effect = {
-            set_country_flag = tiberium_infestation_reached_flag
+            set_country_flag = tiberium_infestation_in_country_flag
             162 = {
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_0 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_1 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_2 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_3 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_4 }
-
-                add_province_modifier = {
-                    static_modifiers = { tiberium_infestation_0 }
-                    province = {
-                        all_provinces = yes
+                set_tiberium_infestation_0 = yes
                     }
-                }
-                clr_state_flag = init_tiberium_infestation_flag
-            }
             IF = {
                 limit = {
                     is_debug = yes
@@ -120,112 +108,12 @@ country_event = {   # tiberium_grow.0
     immediate = {
         every_owned_state = {
             limit = {
-                has_state_flag = tiberium_infestation_3_flag
+                has_tiberium_infestation = yes
             }
             THIS = {
-                remove_province_modifier = {
-                    static_modifiers = { tiberium_infestation_3 }
-                    province = {
-                        all_provinces = yes
+                increase_tiberium_infestation_level = yes
                     }
-                }
-                add_province_modifier = {
-                    static_modifiers = { tiberium_infestation_4 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                clr_state_flag = tiberium_infestation_3_flag
-                set_state_flag = tiberium_infestation_4_flag
-                IF = {
-                    limit = {
-                        is_debug = yes
-                    }
-                    log = "[GetDateText]: Tiberium grow to 4 in the state of [This.GetName] in [This.Owner.GetName]"
-                }
             }
-        }
-        every_owned_state = {
-            limit = {
-                has_state_flag = tiberium_infestation_2_flag
-            }
-            THIS = {
-                remove_province_modifier = {
-                    static_modifiers = { tiberium_infestation_2 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                add_province_modifier = {
-                    static_modifiers = { tiberium_infestation_3 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                clr_state_flag = tiberium_infestation_2_flag
-                set_state_flag = tiberium_infestation_3_flag
-                IF = {
-                    limit = {
-                        is_debug = yes
-                    }
-                    log = "[GetDateText]: Tiberium grow to 3 in the state of [This.GetName] in [This.Owner.GetName]"
-                }
-            }
-        }
-        every_owned_state = {
-            limit = {
-                has_state_flag = tiberium_infestation_1_flag
-            }
-            THIS = {
-                remove_province_modifier = {
-                    static_modifiers = { tiberium_infestation_1 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                add_province_modifier = {
-                    static_modifiers = { tiberium_infestation_2 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                clr_state_flag = tiberium_infestation_1_flag
-                set_state_flag = tiberium_infestation_2_flag
-                IF = {
-                    limit = {
-                        is_debug = yes
-                    }
-                    log = "[GetDateText]: Tiberium grow to 2 in the state of [This.GetName] in [This.Owner.GetName]"
-                }
-            }
-        }
-        every_owned_state = {
-            limit = {
-                has_state_flag = tiberium_infestation_0_flag
-            }
-            THIS = {
-                remove_province_modifier = {
-                    static_modifiers = { tiberium_infestation_0 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                add_province_modifier = {
-                    static_modifiers = { tiberium_infestation_1 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                clr_state_flag = tiberium_infestation_0_flag
-                set_state_flag = tiberium_infestation_1_flag
-                IF = {
-                    limit = {
-                        is_debug = yes
-                    }
-                    log = "[GetDateText]: Tiberium grow to 1 in the state of [This.GetName] in [This.Owner.GetName]"
-                }
-            }
-        }
         # Damage structures
         every_owned_state = {
             limit = {
@@ -299,46 +187,16 @@ country_event = {   # tiberium_spread.0
         # Land spread
         every_owned_state = {
             limit = {
-                OR = {
-                    has_state_flag = tiberium_infestation_2_flag
-                    has_state_flag = tiberium_infestation_3_flag
-                    has_state_flag = tiberium_infestation_4_flag
-                }
+                has_tiberium_infestation = yes
             }
             random_neighbor_state = {
                 limit = {
-                    NOT = {
-                        OR = {
-                            has_state_flag = tiberium_infestation_0_flag
-                            has_state_flag = tiberium_infestation_1_flag
-                            has_state_flag = tiberium_infestation_2_flag
-                            has_state_flag = tiberium_infestation_3_flag
-                            has_state_flag = tiberium_infestation_4_flag
+                    NOT = { has_tiberium_infestation = yes }
                         }
+                increase_tiberium_infestation_level = yes
                     }
                 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_0 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_1 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_2 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_3 }
-                add_dynamic_modifier = { modifier = tiberium_infestation_state_4 }
                 
-                add_province_modifier = {
-                    static_modifiers = { tiberium_infestation_0 }
-                    province = {
-                        all_provinces = yes
-                    }
-                }
-                set_state_flag = tiberium_infestation_0_flag
-                IF = {
-                    limit = {
-                        is_debug = yes
-                    }
-                    log = "[GetDateText]: Tiberium spread via land to the state of [This.GetName] in [This.Owner.GetName]"
-                }
-            }
-        }
-        
         ## # Cross world spread
 
         # Italy to Sardinia
@@ -369,9 +227,9 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             1 = {
                 set_state_flag = tiberium_infestation_0_flag
-                set_state_flag = tiberium_infestation_reached_flag
                 add_province_modifier = {
                     static_modifiers = { tiberium_infestation_0 }
                     province = {
@@ -429,6 +287,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             448 = {
                 set_state_flag = tiberium_infestation_0_flag
                 add_province_modifier = {
@@ -481,6 +340,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             116 = {
                 set_state_flag = tiberium_infestation_0_flag
                 add_province_modifier = {
@@ -518,6 +378,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             182 = {
                 set_state_flag = tiberium_infestation_0_flag
                 add_province_modifier = {
@@ -581,6 +442,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             random_list = {
                 50 = {
                     123 = {
@@ -639,6 +501,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             119 = {
                 set_state_flag = tiberium_infestation_0_flag
                 add_province_modifier = {
@@ -676,6 +539,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             290 = {
                 set_state_flag = tiberium_infestation_0_flag
                 add_province_modifier = {
@@ -751,6 +615,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             random_list = {
                 33 = {
                     366 = {
@@ -827,6 +692,7 @@ country_event = {   # tiberium_spread.0
                     }
                 }
             }
+            set_country_flag = tiberium_infestation_in_country_flag
             random_list = {
                 50 = {
                     536 = {
@@ -928,7 +794,7 @@ country_event = {   # tiberium_spread.3 // Tiberium have been spotted within our
     fire_only_once = no
 
     immediate = {
-        set_country_flag = tiberium_infestation_reached_flag
+        set_country_flag = tiberium_infestation_in_country_flag
 
         IF = {
             limit = {

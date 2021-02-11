@@ -3,15 +3,7 @@ tiberium_decisions = {
 	visible = {
 		OR = {
 			is_debug = yes
-			any_owned_state = {
-				OR = { 
-					has_state_flag = tiberium_infestation_0_flag
-					has_state_flag = tiberium_infestation_1_flag
-					has_state_flag = tiberium_infestation_2_flag
-					has_state_flag = tiberium_infestation_3_flag
-					has_state_flag = tiberium_infestation_4_flag
-				}
-			}
+			has_tiberium_infestation_contry = yes
 		}
 	}
 }
