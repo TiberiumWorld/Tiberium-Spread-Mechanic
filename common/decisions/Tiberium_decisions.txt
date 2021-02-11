@@ -24,13 +24,7 @@ tiberium_decisions = {
                     limit = {
                         has_game_rule = { rule = tiberium_rule_growth option = NORMAL }
                         any_owned_state = {
-                            OR = { 
-                                has_state_flag = tiberium_infestation_0_flag
-                                has_state_flag = tiberium_infestation_1_flag
-                                has_state_flag = tiberium_infestation_2_flag
-                                has_state_flag = tiberium_infestation_3_flag
-                                has_state_flag = tiberium_infestation_4_flag
-                            }
+                            has_tiberium_infestation = yes
                         }
                     }
                     log = "[GetDateText]: Spread Tiberium to [this.GetName]"
@@ -143,6 +137,31 @@ tiberium_decisions = {
                         all_provinces = yes
                     }
                 }
+            }
+        }
+    }
+    debug_add_tiberium_to_random_state = {
+
+        allowed = {
+        }
+
+        available = {
+            is_debug = yes
+        }
+
+        cost = 0
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        visible = {
+            is_debug = yes
+        }
+
+        complete_effect = {
+            random_state = {
+                add_tiberium_infestation_0 = yes
             }
         }
     }
