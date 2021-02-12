@@ -1,104 +1,56 @@
 ﻿
-add_namespace = tiberium_init
 add_namespace = tiberium_spread
 add_namespace = tiberium_grow
 
-news_event = {      # tiberium_init.0 // Astriod event
-    id = tiberium_init.0
-    title = tiberium_init.0.t
-    desc = tiberium_init.0.desc
-    picture = GFX_news_event_tiberium_crash
+country_event = {   # tiberium_grow.0 // check growth
+    id = tiberium_grow.0
+    title = tiberium_grow.0.t
+    desc = tiberium_grow.0.desc
+    #picture = GFX_news_event_tiberium
 
     is_triggered_only = yes
-    hidden = no
+    hidden = yes
     fire_only_once = no
 
     immediate = {
-        hidden_effect = {
-            news_event = { id = tiberium_init.1 days = 7 }
+        if = {
+            limit = { has_game_rule = { rule = tiberium_rule_growth option = LOW } }
+            random_list = {
+                5 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                95 = { }
+            }
         }
-    }
-    
-    option = {
-        name = tiberium_init.0.a
-        goto_province = 3885
-    }
-}
-news_event = {      # tiberium_init.1 // Cristall event
-    id = tiberium_init.1
-    title = tiberium_init.1.t
-    desc = tiberium_init.1.desc
-    picture = GFX_news_event_tiberium_pod_small
-
-    is_triggered_only = yes
-    hidden = no
-    fire_only_once = no
-
-    immediate = {
-        hidden_effect = {
-            country_event = { id = tiberium_init.2 days = 8 }
+        else_if = {
+            limit = { has_game_rule = { rule = tiberium_rule_growth option = NORMAL } }
+            random_list = {
+                10 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                90 = { }
+            }
         }
-    }
-    
-    option = {
-        name = tiberium_init.1.a
-    }
-}
-news_event = {      # tiberium_init.2 // Stange Vegitation event
-    id = tiberium_init.2
-    title = tiberium_init.2.t
-    desc = tiberium_init.2.desc
-    picture = GFX_news_event_tiberium_flora
-
-    is_triggered_only = yes
-    hidden = no
-    fire_only_once = no
-
-    immediate = {
-        hidden_effect = {
-            country_event = { id = tiberium_init.9 days = 7 }
+        else_if = {
+            limit = { has_game_rule = { rule = tiberium_rule_growth option = HIGH } }
+            random_list = {
+                25 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                75 = { }
+            }
         }
-    }
-    
-    option = {
-        name = tiberium_init.2.a
-    }
-}
-news_event = {      # tiberium_init.9 // Spread start event
-    id = tiberium_init.9
-    title = tiberium_init.9.t
-    desc = tiberium_init.9.desc
-    picture = GFX_news_event_tiberium_pod
-
-    is_triggered_only = yes
-    hidden = no
-    fire_only_once = yes
-
-    immediate = {
-        hidden_effect = {
-            set_country_flag = tiberium_infestation_in_country_flag
-            162 = {
-                set_tiberium_infestation_0 = yes
-                    }
-            IF = {
-                limit = {
-                    is_debug = yes
-                }
-                log = "[GetDateText]: [This.GetName]: Tiberium infestation started"
+        else_if = {
+            limit = { has_game_rule = { rule = tiberium_rule_growth option = EXTREAM } }
+            random_list = {
+                40 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                60 = { }
             }
         }
     }
     
     option = {
-        name = tiberium_init.9.a
-        add_stability = -0.05
+        name = tiberium_grow.0.a
     }
 }
-
-country_event = {   # tiberium_grow.0
-    id = tiberium_grow.0
-    title = tiberium_grow.0.t
-    desc = tiberium_grow.0.desc
+country_event = {   # tiberium_grow.1 // growth
+    id = tiberium_grow.1
+    title = tiberium_grow.1.t
+    desc = tiberium_grow.1.desc
     #picture = GFX_news_event_tiberium
 
     is_triggered_only = yes
@@ -112,8 +64,8 @@ country_event = {   # tiberium_grow.0
             }
             THIS = {
                 increase_tiberium_infestation_level = yes
-                    }
             }
+        }
         # Damage structures
         every_owned_state = {
             limit = {
@@ -170,9 +122,10 @@ country_event = {   # tiberium_grow.0
     }
     
     option = {
-        name = tiberium_grow.0.a
+        name = tiberium_grow.1.a
     }
 }
+
 country_event = {   # tiberium_spread.0
     id = tiberium_spread.0
     title = tiberium_spread.0.t
@@ -191,11 +144,11 @@ country_event = {   # tiberium_spread.0
             }
             random_neighbor_state = {
                 limit = {
-                    NOT = { has_tiberium_infestation = yes }
-                        }
-                increase_tiberium_infestation_level = yes
-                    }
+                    has_tiberium_infestation = no
                 }
+                increase_tiberium_infestation_level = yes
+            }
+        }
                 
         ## # Cross world spread
 
@@ -734,77 +687,5 @@ country_event = {   # tiberium_spread.0
     
     option = {
         name = tiberium_spread.0.a
-    }
-}
-
-
-
-country_event = {   # tiberium_spread.1 // Nation has fully fallen to Tiberium
-    id = tiberium_spread.1
-    title = tiberium_spread.1.t
-    desc = tiberium_spread.1.desc
-    #picture = GFX_news_event_tiberium_bridge
-
-    is_triggered_only = yes
-    hidden = no
-    fire_only_once = no
-
-    immediate = {
-        set_country_flag = tiberium_infestation_full_flag
-
-        every_country = {
-            news_event = { id = tiberium_spread.2 days = 3 }
-        }
-        IF = {
-            limit = {
-                is_debug = yes
-            }
-            log = "[GetDateText]: [FROM.GetName] Succumb to Tiberium"
-        }
-    }
-    
-    option = {
-        name = tiberium_spread.1.a
-    }
-}
-news_event = {      # tiberium_spread.2 // A nation succum to tiberium!
-    id = tiberium_spread.2
-    title = tiberium_spread.2.t
-    desc = tiberium_spread.2.desc
-    picture = GFX_news_event_tiberium_bridge
-
-    is_triggered_only = yes
-    hidden = no
-    fire_only_once = no
-    
-    immediate = {}
-
-    option = {
-        name = tiberium_spread.2.a
-    }
-}
-country_event = {   # tiberium_spread.3 // Tiberium have been spotted within our borders
-    id = tiberium_spread.3
-    title = tiberium_spread.3.t
-    desc = tiberium_spread.3.desc
-    #picture = GFX_news_event_tiberium_bridge
-
-    is_triggered_only = yes
-    hidden = no
-    fire_only_once = no
-
-    immediate = {
-        set_country_flag = tiberium_infestation_in_country_flag
-
-        IF = {
-            limit = {
-                is_debug = yes
-            }
-            log = "[GetDateText]: Tiberium have reached [FROM.GetName]"
-        }
-    }
-    
-    option = {
-        name = tiberium_spread.3.a
     }
 }

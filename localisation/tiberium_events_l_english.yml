@@ -15,17 +15,17 @@
  tiberium_init.9.desc:0 "Reports are coming in from across the region of Tuscany that the Tiberium crystals seems to be spreading. Strange threes seems to be the source of the spread. Scientists are looking in the phenomena."
  tiberium_init.9.a:0 "This cant be good..."
 
- tiberium_spread.1.t:0 "Our nation is in disaray!"
- tiberium_spread.1.desc:0 "Our nation is in chaos and people are fleeing out of our nation due to the Tiberium crystal."
- tiberium_spread.1.a:0 "We need to take action!"
+ tiberium_event.1.t:0 "Our nation is in disaray!"
+ tiberium_event.1.desc:0 "Our nation is in chaos and people are fleeing out of our nation due to the Tiberium crystal."
+ tiberium_event.1.a:0 "We need to take action!"
 
- tiberium_spread.2.t:0 "[From.Root.GetName] taken over by Tiberium"
- tiberium_spread.2.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
- tiberium_spread.2.a:0 "Horrific!"
+ tiberium_event.2.t:0 "[From.Root.GetName] taken over by Tiberium"
+ tiberium_event.2.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
+ tiberium_event.2.a:0 "Horrific!"
 
 
- tiberium_spread.3.t:0 "Tiberium have been spoted within our border"
- tiberium_spread.3.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
- tiberium_spread.3.a:0 "Horrific!"
+ tiberium_event.3.t:0 "Tiberium have been spoted within our border"
+ tiberium_event.3.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
+ tiberium_event.3.a:0 "Horrific!"
 
 
