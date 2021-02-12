@@ -22,7 +22,6 @@ tiberium_decisions = {
             every_country = {
                 if = {
                     limit = {
-                        has_game_rule = { rule = tiberium_rule_growth option = NORMAL }
                         any_owned_state = {
                             has_tiberium_infestation = yes
                         }
@@ -54,20 +53,15 @@ tiberium_decisions = {
 
         complete_effect = {
             every_country = {
+
                 if = {
                     limit = {
-                        has_game_rule = { rule = tiberium_rule_growth option = NORMAL }
                         any_owned_state = {
-                            OR = { 
-                                has_state_flag = tiberium_infestation_0_flag
-                                has_state_flag = tiberium_infestation_1_flag
-                                has_state_flag = tiberium_infestation_2_flag
-                                has_state_flag = tiberium_infestation_3_flag
-                            }
+                            has_tiberium_infestation = yes
                         }
                     }
                     log = "[GetDateText]: Growing Tiberium in [this.GetName]"
-                    country_event = {id = tiberium_grow.0 days = 0 }
+                    country_event = {id = tiberium_grow.1 days = 0 }
                 }
             }
         }

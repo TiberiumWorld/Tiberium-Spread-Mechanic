@@ -1,0 +1,171 @@
+﻿add_namespace = tiberium_init
+add_namespace = tiberium_event
+
+news_event = {      # tiberium_init.0 // Astriod event
+    id = tiberium_init.0
+    title = tiberium_init.0.t
+    desc = tiberium_init.0.desc
+    picture = GFX_news_event_tiberium_crash
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        hidden_effect = {
+            news_event = { id = tiberium_init.1 days = 7 }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.0.a
+        goto_province = 3885
+    }
+}
+news_event = {      # tiberium_init.1 // Cristall event
+    id = tiberium_init.1
+    title = tiberium_init.1.t
+    desc = tiberium_init.1.desc
+    picture = GFX_news_event_tiberium_pod_small
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        hidden_effect = {
+            country_event = { id = tiberium_init.2 days = 8 }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.1.a
+    }
+}
+news_event = {      # tiberium_init.2 // Stange Vegitation event
+    id = tiberium_init.2
+    title = tiberium_init.2.t
+    desc = tiberium_init.2.desc
+    picture = GFX_news_event_tiberium_flora
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        hidden_effect = {
+            country_event = { id = tiberium_init.9 days = 7 }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.2.a
+    }
+}
+news_event = {      # tiberium_init.9 // Spread start event
+    id = tiberium_init.9
+    title = tiberium_init.9.t
+    desc = tiberium_init.9.desc
+    picture = GFX_news_event_tiberium_pod
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = yes
+
+    immediate = {
+        hidden_effect = {
+            set_country_flag = tiberium_infestation_reached_flag
+            162 = {
+                add_dynamic_modifier = { modifier = tiberium_infestation_state_0 }
+                add_dynamic_modifier = { modifier = tiberium_infestation_state_1 }
+                add_dynamic_modifier = { modifier = tiberium_infestation_state_2 }
+                add_dynamic_modifier = { modifier = tiberium_infestation_state_3 }
+                add_dynamic_modifier = { modifier = tiberium_infestation_state_4 }
+
+                add_tiberium_infestation_0 = yes
+                clr_state_flag = init_tiberium_infestation_flag
+            }
+            IF = {
+                limit = {
+                    is_debug = yes
+                }
+                log = "[GetDateText]: [This.GetName]: Tiberium infestation started"
+            }
+        }
+    }
+    
+    option = {
+        name = tiberium_init.9.a
+        add_stability = -0.05
+    }
+}
+
+country_event = {   # tiberium_event.1 // Nation has fully fallen to Tiberium
+    id = tiberium_event.1
+    title = tiberium_event.1.t
+    desc = tiberium_event.1.desc
+    #picture = GFX_news_event_tiberium_bridge
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        set_country_flag = tiberium_infestation_full_flag
+
+        every_country = {
+            news_event = { id = tiberium_event.2 days = 3 }
+        }
+        IF = {
+            limit = {
+                is_debug = yes
+            }
+            log = "[GetDateText]: [FROM.GetName] Succumb to Tiberium"
+        }
+    }
+    
+    option = {
+        name = tiberium_event.1.a
+    }
+}
+news_event = {      # tiberium_event.2 // A nation succum to tiberium!
+    id = tiberium_event.2
+    title = tiberium_event.2.t
+    desc = tiberium_event.2.desc
+    picture = GFX_news_event_tiberium_bridge
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+    
+    immediate = {}
+
+    option = {
+        name = tiberium_event.2.a
+    }
+}
+country_event = {   # tiberium_event.3 // Tiberium have been spotted within our borders
+    id = tiberium_event.3
+    title = tiberium_event.3.t
+    desc = tiberium_event.3.desc
+    #picture = GFX_news_event_tiberium_bridge
+
+    is_triggered_only = yes
+    hidden = no
+    fire_only_once = no
+
+    immediate = {
+        set_country_flag = tiberium_infestation_reached_flag
+
+        IF = {
+            limit = {
+                is_debug = yes
+            }
+            log = "[GetDateText]: Tiberium have reached [FROM.GetName]"
+        }
+    }
+    
+    option = {
+        name = tiberium_event.3.a
+    }
+}
