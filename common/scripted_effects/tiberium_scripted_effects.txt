@@ -33,7 +33,7 @@ add_tiberium_infestation_state_modifier = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have appeard in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have appeard in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 }
@@ -230,7 +230,7 @@ increase_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have appeard in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have appeard in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 0 > 1
@@ -253,7 +253,7 @@ increase_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have grown to 1 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have grown to 1 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 1 > 2
@@ -276,7 +276,7 @@ increase_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have grown to 2 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have grown to 2 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 2 > 3
@@ -299,7 +299,7 @@ increase_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have grown to 3 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have grown to 3 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 3 > 4
@@ -322,7 +322,7 @@ increase_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have grown to 4 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have grown to 4 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 }
@@ -347,7 +347,7 @@ decrease_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have decreased to 3 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have decreased to 3 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 3 > 2
@@ -370,7 +370,7 @@ decrease_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have decreased to 2 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have decreased to 2 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 2 > 1
@@ -393,7 +393,7 @@ decrease_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have decreased to 1 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have decreased to 1 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 1 > 0
@@ -416,7 +416,7 @@ decrease_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have decreased to 0 in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have decreased to 0 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 	else_if = { # 0 > -
@@ -432,7 +432,7 @@ decrease_tiberium_infestation_level = { # Scope: State
 			limit = {
 				is_debug = yes
 			}
-			log = "[GetDateText]: Tiberium have been cleared in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have been cleared in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 }

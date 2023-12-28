@@ -3,7 +3,8 @@ tiberium_decisions = {
 	visible = {
 		OR = {
 			is_debug = yes
-			has_tiberium_infestation_contry = yes
+			has_tiberium_infestation_country = yes
+			any_country = { has_tiberium_infestation_country = yes }
 		}
 	}
 }

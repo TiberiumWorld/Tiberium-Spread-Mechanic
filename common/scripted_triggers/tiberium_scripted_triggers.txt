@@ -1,17 +1,38 @@
 has_tiberium_infestation = { # Scope: State
-	OR = {
-		has_state_flag = tiberium_infestation_0_flag
-		has_state_flag = tiberium_infestation_1_flag
-		has_state_flag = tiberium_infestation_2_flag
-		has_state_flag = tiberium_infestation_3_flag
-		has_state_flag = tiberium_infestation_4_flag
-	}
+    OR = {
+        has_state_flag = tiberium_infestation_0_flag
+        has_state_flag = tiberium_infestation_1_flag
+        has_state_flag = tiberium_infestation_2_flag
+        has_state_flag = tiberium_infestation_3_flag
+        has_state_flag = tiberium_infestation_4_flag
+
+        has_state_flag = tiberium_infestation_4_flag
+        has_state_flag = tiberium_infestation_5_flag
+        has_state_flag = tiberium_infestation_6_flag
+        has_state_flag = tiberium_infestation_7_flag
+        has_state_flag = tiberium_infestation_8_flag
+        
+        has_state_flag = tiberium_infestation_9_flag
+        has_state_flag = tiberium_infestation_10_flag
+        has_state_flag = tiberium_infestation_11_flag
+        has_state_flag = tiberium_infestation_12_flag
+        has_state_flag = tiberium_infestation_13_flag
+        
+        has_state_flag = tiberium_infestation_14_flag
+        has_state_flag = tiberium_infestation_15_flag
+        has_state_flag = tiberium_infestation_16_flag
+        has_state_flag = tiberium_infestation_17_flag
+        has_state_flag = tiberium_infestation_18_flag
+    }
 }
-has_tiberium_infestation_contry = { # Scope: Country
-	OR = {
-		any_owned_state = {
-			has_tiberium_infestation = yes 
-		}
-		has_country_flag = tiberium_infestation_in_country_flag
-	}
+has_tiberium_infestation_country = { # Scope: Country
+    custom_trigger_tooltip = {
+        tooltip = has_tiberium_infestation_country_tooltip
+        OR = {
+            any_owned_state = {
+                has_tiberium_infestation = yes 
+            }
+            has_country_flag = tiberium_infestation_in_country_flag
+        }
+    }
 }

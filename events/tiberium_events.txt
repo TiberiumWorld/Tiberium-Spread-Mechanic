@@ -89,7 +89,7 @@ news_event = {      # tiberium_init.9 // Spread start event
                 limit = {
                     is_debug = yes
                 }
-                log = "[GetDateText]: [This.GetName]: Tiberium infestation started"
+                log = "Tiberium INFO: [This.GetName]: Tiberium infestation started"
             }
         }
     }
@@ -120,7 +120,7 @@ country_event = {   # tiberium_event.1 // Nation has fully fallen to Tiberium
             limit = {
                 is_debug = yes
             }
-            log = "[GetDateText]: [FROM.GetName] Succumb to Tiberium"
+            log = "Tiberium INFO: [FROM.GetName] Succumb to Tiberium"
         }
     }
     
@@ -161,7 +161,7 @@ country_event = {   # tiberium_event.3 // Tiberium have been spotted within our 
             limit = {
                 is_debug = yes
             }
-            log = "[GetDateText]: Tiberium have reached [FROM.GetName]"
+            log = "Tiberium INFO: Tiberium have reached [FROM.GetName]"
         }
     }
     

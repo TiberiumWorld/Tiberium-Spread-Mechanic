@@ -1,0 +1,9 @@
+﻿l_english:
+ tiberium_decisions:0 "Tiberium"
+
+ tiberium_open_up_for_experimentation:0 "Open up for experimentation"
+ tiberium_open_up_for_experimentation_desc:0 "Start experimentation on the strange Tiberium crystals."
+
+ tiberium_coverup:0 "Coverup the crystals existence"
+ tiberium_coverup_desc:0 "Quest down the existence of the tiberium crystals"
+ tiberium_ongoing_coverup_flag:0 "Already running a coverup"

@@ -16,30 +16,33 @@ country_event = {   # tiberium_grow.0 // check growth
         if = {
             limit = { has_game_rule = { rule = tiberium_rule_growth option = LOW } }
             random_list = {
-                5 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                5 = { country_event = {id = tiberium_grow.1 days = 1 } }
                 95 = { }
             }
         }
         else_if = {
             limit = { has_game_rule = { rule = tiberium_rule_growth option = NORMAL } }
             random_list = {
-                10 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                10 = { country_event = {id = tiberium_grow.1 days = 1 } }
                 90 = { }
             }
         }
         else_if = {
             limit = { has_game_rule = { rule = tiberium_rule_growth option = HIGH } }
             random_list = {
-                25 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                25 = { country_event = {id = tiberium_grow.1 days = 1 } }
                 75 = { }
             }
         }
         else_if = {
             limit = { has_game_rule = { rule = tiberium_rule_growth option = EXTREAM } }
             random_list = {
-                40 = { country_event = {id = tiberium_grow.0 days = 1 } }
+                40 = { country_event = {id = tiberium_grow.1 days = 1 } }
                 60 = { }
             }
+        }
+        else = {
+            log = "Tiberium ERROR: Growth check failed"
         }
     }
     
@@ -128,9 +131,6 @@ country_event = {   # tiberium_grow.1 // growth
 
 country_event = {   # tiberium_spread.0
     id = tiberium_spread.0
-    title = tiberium_spread.0.t
-    desc = tiberium_spread.0.desc
-    #picture = GFX_news_event_tiberium
 
     is_triggered_only = yes
     hidden = yes
@@ -143,9 +143,7 @@ country_event = {   # tiberium_spread.0
                 has_tiberium_infestation = yes
             }
             random_neighbor_state = {
-                limit = {
-                    has_tiberium_infestation = no
-                }
+                limit = { has_tiberium_infestation = no }
                 increase_tiberium_infestation_level = yes
             }
         }
@@ -193,7 +191,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }        
             114 = {
@@ -208,7 +206,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }
         }
@@ -253,7 +251,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }
             458 = {
@@ -268,7 +266,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }
         }
@@ -306,7 +304,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }
         }
@@ -344,7 +342,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }
         }
@@ -410,7 +408,7 @@ country_event = {   # tiberium_spread.0
                             limit = {
                                 is_debug = yes
                             }
-                            log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                            log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                         }
                     }
                 }
@@ -427,7 +425,7 @@ country_event = {   # tiberium_spread.0
                             limit = {
                                 is_debug = yes
                             }
-                            log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                            log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                         }
                     }
                 }
@@ -467,7 +465,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }
         }
@@ -505,7 +503,7 @@ country_event = {   # tiberium_spread.0
                     limit = {
                         is_debug = yes
                     }
-                    log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                    log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                 }
             }
         }
@@ -583,7 +581,7 @@ country_event = {   # tiberium_spread.0
                             limit = {
                                 is_debug = yes
                             }
-                            log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                            log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                         }
                     }
                 }
@@ -600,7 +598,7 @@ country_event = {   # tiberium_spread.0
                             limit = {
                                 is_debug = yes
                             }
-                            log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                            log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                         }
                     }
                 }
@@ -617,7 +615,7 @@ country_event = {   # tiberium_spread.0
                             limit = {
                                 is_debug = yes
                             }
-                            log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                            log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                         }
                     }
                 }
@@ -660,7 +658,7 @@ country_event = {   # tiberium_spread.0
                             limit = {
                                 is_debug = yes
                             }
-                            log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                            log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                         }
                     }
                 }
@@ -677,7 +675,7 @@ country_event = {   # tiberium_spread.0
                             limit = {
                                 is_debug = yes
                             }
-                            log = "[GetDateText]: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
+                            log = "Tiberium INFO: Tiberium spread cross water to the state of [This.GetName] in [This.Owner.GetName]"
                         }
                     }
                 }
@@ -685,7 +683,5 @@ country_event = {   # tiberium_spread.0
         }
     }
     
-    option = {
-        name = tiberium_spread.0.a
-    }
+    option = { }
 }
