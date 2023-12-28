@@ -1,0 +1,27 @@
+name: Deploy Release
+on:
+  release:
+      types: [ published ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+  build:
+    name: Create And Upload Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+
+      - name: Build releases
+        run: ./tools/deploy.sh ${{github.ref_name}}
+
+      - name: Upload release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          asset_name: Tiberium-${{github.ref_name}}.zip
+          file: release/Tiberium-${{github.ref_name}}.zip
