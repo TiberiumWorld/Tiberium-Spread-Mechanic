@@ -1,162 +1,82 @@
 tiberium_decisions = {
-    debug_spread_tiberium = {
-
-        allowed = {
-        }
-
-        available = {
-            is_debug = yes
-        }
-
-        cost = 0
-
-        ai_will_do = {
-            factor = 0
-        }
+    tiberium_open_up_for_experimentation = {
+        icon = generic_propaganda
+        priority = -10
 
         visible = {
-            is_debug = yes
-        }
-
-        complete_effect = {
-            every_country = {
-                if = {
-                    limit = {
-                        any_owned_state = {
-                            has_tiberium_infestation = yes
-                        }
-                    }
-                    log = "[GetDateText]: Spread Tiberium to [this.GetName]"
-                    country_event = {id = tiberium_spread.0 days = 0 }
+            OR = {
+                is_debug = yes
+                has_tiberium_infestation_country = yes
+                any_neighbor_country = {
+                    has_tiberium_infestation_country = yes
                 }
             }
         }
-    }
-    debug_grow_tiberium = {
-
-        allowed = {
-        }
-
         available = {
-            is_debug = yes
+            has_war = no
+            has_tech = computing_machine
+            has_tiberium_infestation_country = yes
         }
+        
+        fire_only_once = yes
 
-        cost = 0
+        cost = 100
+        days_remove = 30
 
         ai_will_do = {
             factor = 0
         }
 
-        visible = {
-            is_debug = yes
-        }
-
+        modifier = {}
         complete_effect = {
-            every_country = {
+            set_country_flag = tiberium_researched_decision_flag
+        }
+        remove_effect = {}
+    }
+}
 
-                if = {
-                    limit = {
-                        any_owned_state = {
-                            has_tiberium_infestation = yes
-                        }
-                    }
-                    log = "[GetDateText]: Growing Tiberium in [this.GetName]"
-                    country_event = {id = tiberium_grow.1 days = 0 }
+propaganda_efforts = {
+    tiberium_coverup = {
+        icon = generic_propaganda
+
+        visible = {
+            OR = {
+                is_debug = yes
+                has_tiberium_infestation_country = yes
+                any_neighbor_country = {
+                    has_tiberium_infestation_country = yes
                 }
             }
         }
-    }
-    debug_clr_succum_flags = {
-
-        allowed = {
-        }
-
         available = {
-            is_debug = yes
-        }
-
-        cost = 0
-
-        ai_will_do = {
-            factor = 0
-        }
-
-        visible = {
-            is_debug = yes
-        }
-
-        complete_effect = {
-            every_country = {
-                log = "[GetDateText]: Tiberium succum flag cleared for [this.GetName]"
-                clr_country_flag = tiberium_infestation_full_flag
-            }
-        }
-    }
-    debug_clr_tiberium_from_contry = {
-
-        allowed = {
-        }
-
-        available = {
-            is_debug = yes
-        }
-
-        cost = 0
-
-        ai_will_do = {
-            factor = 0
-        }
-
-        visible = {
-            is_debug = yes
-        }
-
-        complete_effect = {
-            log = "[GetDateText]: Tiberium removed from [this.GetName]"
-            every_owned_state = {
-                clr_state_flag = tiberium_infestation_0_flag
-                clr_state_flag = tiberium_infestation_1_flag
-                clr_state_flag = tiberium_infestation_2_flag
-                clr_state_flag = tiberium_infestation_3_flag
-                clr_state_flag = tiberium_infestation_4_flag
-                remove_dynamic_modifier = { modifier = tiberium_infestation_state_0 }
-                remove_dynamic_modifier = { modifier = tiberium_infestation_state_1 }
-                remove_dynamic_modifier = { modifier = tiberium_infestation_state_2 }
-                remove_dynamic_modifier = { modifier = tiberium_infestation_state_3 }
-                remove_dynamic_modifier = { modifier = tiberium_infestation_state_4 }
-                
-                remove_province_modifier = {
-                    static_modifiers = { tiberium_infestation_0 }
-                    province = {
-                        all_provinces = yes
-                    }
+            NOT = { has_country_flag = tiberium_ongoing_coverup_flag }
+            OR = {
+                has_tiberium_infestation_country = yes
+                any_neighbor_country = {
+                    has_tiberium_infestation_country = yes
                 }
             }
         }
-    }
-    debug_add_tiberium_to_random_state = {
 
-        allowed = {
-        }
 
-        available = {
-            is_debug = yes
-        }
-
-        cost = 0
+        cost = 150
+        days_remove = 90
+        days_re_enable = 180
 
         ai_will_do = {
             factor = 0
         }
 
-        visible = {
-            is_debug = yes
+        modifier = {
+            stability_weekly = 0.005
         }
 
         complete_effect = {
-            random_state = {
-                add_tiberium_infestation_0 = yes
-            }
+            set_country_flag = tiberium_ongoing_coverup_flag
+        }
+
+        remove_effect = {
+            clr_country_flag = tiberium_ongoing_coverup_flag
         }
     }
 }

@@ -9,3 +9,5 @@
  tiberium_infestation_state_2:0 "Major Tiberium Infestation"
  tiberium_infestation_state_3:0 "Heavy Tiberium Infestation"
  tiberium_infestation_state_4:0 "Extream Tiberium Infestation"
+ 
+ has_tiberium_infestation_country_tooltip:0 "Has any level of §YTiberium Infestation§! in country"

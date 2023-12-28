@@ -1,0 +1,7 @@
+spriteTypes = {	
+	# categories
+	spriteType = {
+		name = "GFX_decision_category_tiberium"
+		texturefile = "gfx/interface/decisions/decision_category_tiberium.dds"
+	}
+}

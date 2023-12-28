@@ -1,4 +1,7 @@
+name="Tiberium Spread Mechanic DevBuild"
+
 version="0.0.0"
+supported_version="1.13.*"
 tags={
 	"Alternative History"
 	"Events"
@@ -6,6 +9,6 @@ tags={
 	"Graphics"
 	"Technologies"
 }
-name="Tiberium Spread Mechanic DevBuild"
-supported_version="1.10.*"
+
+path="mod/Tiberium_DevBuild"
 remote_file_id="2374598544"
