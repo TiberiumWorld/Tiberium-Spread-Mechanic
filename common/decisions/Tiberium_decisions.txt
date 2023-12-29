@@ -1,7 +1,6 @@
 tiberium_decisions = {
-    tiberium_open_up_for_experimentation = {
-        icon = generic_propaganda
-        priority = -10
+    tiberium_collect_samples = {
+        icon = generic_research
 
         visible = {
             OR = {
@@ -10,12 +9,35 @@ tiberium_decisions = {
                 any_neighbor_country = {
                     has_tiberium_infestation_country = yes
                 }
+                any_allied_country = {
+                    has_tiberium_infestation_country = yes
+                }
+                any_subject_country = {
+                    has_tiberium_infestation_country = yes
+                }
             }
         }
         available = {
             has_war = no
             has_tech = computing_machine
-            has_tiberium_infestation_country = yes
+            num_of_civilian_factories_available_for_projects > 4
+            OR = {
+                THIS = {
+                    has_tiberium_infestation_country = yes
+                }
+                any_neighbor_country = {
+                    has_war = no
+                    has_country_flag = tiberium_research_shared_flag
+                }
+                any_allied_country = {
+                    has_war = no
+                    has_country_flag = tiberium_research_shared_flag
+                }
+                any_subject_country = {
+                    has_war = no
+                    has_country_flag = tiberium_research_shared_flag
+                }
+            }
         }
         
         fire_only_once = yes
@@ -27,9 +49,169 @@ tiberium_decisions = {
             factor = 0
         }
 
-        modifier = {}
+        modifier = {
+            civilian_factory_use = 4
+        }
         complete_effect = {
-            set_country_flag = tiberium_researched_decision_flag
+            set_country_flag = tiberium_research_00_flag
+        }
+        remove_effect = {}
+    }
+    tiberium_share_samples = {
+        icon = generic_research
+
+        visible = {
+            OR = {
+                is_debug = yes
+                has_country_flag = tiberium_research_00_flag
+            }
+        }
+        available = {
+            has_war = no
+            has_country_flag = tiberium_research_00_flag
+        }
+        
+        fire_only_once = yes
+
+        cost = 50
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        modifier = {
+        }
+        complete_effect = {
+            set_country_flag = tiberium_research_shared_flag
+        }
+        remove_effect = {}
+    }
+    tiberium_analyze_samples = {
+        icon = generic_research
+
+        visible = {
+            OR = {
+                is_debug = yes
+                has_country_flag = tiberium_research_00_flag
+            }
+        }
+        available = {
+            has_war = no
+            amount_research_slots > 4
+            has_tech = computing_machine
+            num_of_civilian_factories_available_for_projects > 4
+        }
+        
+        fire_only_once = yes
+
+        cost = 50
+        days_remove = 30
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        modifier = {
+            civilian_factory_use = 4
+        }
+        complete_effect = {
+            set_country_flag = tiberium_research_01_flag
+        }
+        remove_effect = {}
+    }
+
+    tiberium_find_usage_civilian = {
+        icon = generic_construction
+
+        visible = {
+            OR = {
+                is_debug = yes
+                has_country_flag = tiberium_research_01_flag
+            }
+        }
+        available = {
+            has_country_flag = tiberium_research_01_flag
+            num_of_civilian_factories_available_for_projects > 4
+        }
+        
+        fire_only_once = no
+
+        cost = 100
+        days_remove = 30
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        modifier = {
+            civilian_factory_use = 4
+        }
+        complete_effect = {
+        }
+        remove_effect = {}
+    }
+    tiberium_find_usage_military = {
+        icon = generic_industry
+
+        visible = {
+            OR = {
+                is_debug = yes
+                has_country_flag = tiberium_research_01_flag
+            }
+        }
+        available = {
+            has_country_flag = tiberium_research_01_flag
+            num_of_civilian_factories_available_for_projects > 4
+        }
+        
+        fire_only_once = no
+
+        cost = 100
+        days_remove = 30
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        modifier = {
+            civilian_factory_use = 4
+        }
+        complete_effect = {
+        }
+        remove_effect = {}
+    }
+
+    
+    tiberium_clear_province = {
+        icon = generic_construction
+
+        visible = {
+            OR = {
+                is_debug = yes
+                has_country_flag = tiberium_research_01_flag
+            }
+        }
+        available = {
+            has_country_flag = tiberium_research_01_flag
+            has_tech = excavation4
+            num_of_civilian_factories_available_for_projects > 4
+            has_tiberium_infestation_country = yes
+        }
+        
+        fire_only_once = no
+
+        cost = 10
+        days_remove = 3
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        modifier = {
+            civilian_factory_use = 4
+        }
+        complete_effect = {
+            country_event = {id = tiberium_spread.0 days = 0 }
         }
         remove_effect = {}
     }
@@ -37,7 +219,7 @@ tiberium_decisions = {
 
 propaganda_efforts = {
     tiberium_coverup = {
-        icon = generic_propaganda
+        icon = generic_political_discourse
 
         visible = {
             OR = {

@@ -159,4 +159,115 @@ tiberium_decisions = {
             }
         }
     }
+    tiberium_debug_add_tiberium_to_random_owned_state = {
+
+        allowed = {
+        }
+
+        available = {
+            is_debug = yes
+        }
+
+        cost = 0
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        visible = {
+            is_debug = yes
+        }
+
+        complete_effect = {
+            random_owned_state = {
+                add_tiberium_infestation_0 = yes
+            }
+        }
+    }
+    tiberium_debug_clr_tiberium_to_random_owned_state = {
+
+        allowed = {
+        }
+
+        available = {
+            is_debug = yes
+        }
+
+        cost = 0
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        visible = {
+            is_debug = yes
+        }
+
+        complete_effect = {
+            random_owned_state = {
+                limit = { has_tiberium_infestation = yes }
+                decrease_tiberium_infestation_level = yes
+            }
+        }
+    }
+    tiberium_debug_clr_tiberium_to_random_owned_state_event = {
+
+        allowed = {
+        }
+
+        available = {
+            is_debug = yes
+        }
+
+        cost = 0
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        visible = {
+            is_debug = yes
+        }
+
+        complete_effect = {
+            random_list = {
+                20 = {
+                    random_owned_state = {
+                        limit = { has_tiberium_infestation = yes }
+                        save_event_target_as = tiberium_state_clearing_target
+                        decrease_tiberium_infestation_level = yes
+                    }
+                    random_owned_state = {
+                        limit = { has_tiberium_infestation = yes }
+                        save_event_target_as = tiberium_state_clearing_target
+                        decrease_tiberium_infestation_level = yes
+                    }
+                    random_owned_state = {
+                        limit = { has_tiberium_infestation = yes }
+                        save_event_target_as = tiberium_state_clearing_target
+                        decrease_tiberium_infestation_level = yes
+                    }
+                }
+                30 = {
+                    random_owned_state = {
+                        limit = { has_tiberium_infestation = yes }
+                        save_event_target_as = tiberium_state_clearing_target
+                        decrease_tiberium_infestation_level = yes
+                    }
+                    random_owned_state = {
+                        limit = { has_tiberium_infestation = yes }
+                        save_event_target_as = tiberium_state_clearing_target
+                        decrease_tiberium_infestation_level = yes
+                    }
+                }
+                50 = {
+                    random_owned_state = {
+                        limit = { has_tiberium_infestation = yes }
+                        save_event_target_as = tiberium_state_clearing_target
+                        decrease_tiberium_infestation_level = yes
+                    }
+                }
+            }
+        }
+    }
 }

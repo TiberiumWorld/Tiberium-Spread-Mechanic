@@ -1,5 +1,5 @@
 tiberium_decisions = {
-	icon = generic_research
+	icon = GFX_decision_category_tiberium
 	visible = {
 		OR = {
 			is_debug = yes
