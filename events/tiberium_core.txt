@@ -4,9 +4,6 @@ add_namespace = tiberium_grow
 
 country_event = {   # tiberium_grow.0 // check growth
     id = tiberium_grow.0
-    title = tiberium_grow.0.t
-    desc = tiberium_grow.0.desc
-    #picture = GFX_news_event_tiberium
 
     is_triggered_only = yes
     hidden = yes
@@ -46,15 +43,10 @@ country_event = {   # tiberium_grow.0 // check growth
         }
     }
     
-    option = {
-        name = tiberium_grow.0.a
-    }
+    option = {}
 }
 country_event = {   # tiberium_grow.1 // growth
     id = tiberium_grow.1
-    title = tiberium_grow.1.t
-    desc = tiberium_grow.1.desc
-    #picture = GFX_news_event_tiberium
 
     is_triggered_only = yes
     hidden = yes
@@ -62,12 +54,8 @@ country_event = {   # tiberium_grow.1 // growth
 
     immediate = {
         every_owned_state = {
-            limit = {
-                has_tiberium_infestation = yes
-            }
-            THIS = {
-                increase_tiberium_infestation_level = yes
-            }
+            limit = { has_tiberium_infestation = yes }
+            THIS = { increase_tiberium_infestation_level = yes }
         }
         # Damage structures
         every_owned_state = {
@@ -82,51 +70,49 @@ country_event = {   # tiberium_grow.1 // growth
             THIS = {
                 damage_building = {
                     type = infrastructure
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = arms_factory
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = industrial_complex
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = dockyard
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = air_base
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = naval_base
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = fuel_silo
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = rocket_site
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = synthetic_refinery
-                    damage = 0.20
+                    damage = 0.10
                 }
                 damage_building = {
                     type = nuclear_reactor
-                    damage = 0.20
+                    damage = 0.10
                 }
             }
         }
     }
     
-    option = {
-        name = tiberium_grow.1.a
-    }
+    option = {}
 }
 
 country_event = {   # tiberium_spread.0
