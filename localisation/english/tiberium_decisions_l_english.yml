@@ -1,9 +1,27 @@
 ﻿l_english:
  tiberium_decisions:0 "Tiberium"
 
- tiberium_open_up_for_experimentation:0 "Open up for experimentation"
- tiberium_open_up_for_experimentation_desc:0 "Start experimentation on the strange Tiberium crystals."
+ tiberium_collect_samples:0 "Collect Samples and Data"
+ tiberium_collect_samples_desc:0 "Start collecting samples data regarding the strange Tiberium crystals."
+ tiberium_research_00_flag:0 "Have access to Tiberium crystal samples"
+
+ tiberium_share_samples:0 "Share Tiberium Samples"
+ tiberium_share_samples_desc:0 "Allow scientists form allies or neighboring nations to use samples."
+ tiberium_research_shared_flag:0 "Sharing Tiberium Samples"
+
+ tiberium_analyze_samples:0 "Analyze Samples and Experiment"
+ tiberium_analyze_samples_desc:0 "Start Experiment and analyze the Tiberium samples."
+ tiberium_research_01_flag:0 "Have Analyzed the Tiberium Crystal"
+
+ tiberium_find_usage_civilian:0 "Find Civilian Usage"
+ tiberium_find_usage_civilian_desc:0 "Try to find civilian application for the crystals."
+
+ tiberium_find_usage_military:0 "Find Military Usage"
+ tiberium_find_usage_military_desc:0 "Try to weaponize the Tiberium crystals."
+ 
+ tiberium_clear_province:0 "Attempt to Clear Tiberium in State"
+ tiberium_clear_province_desc:0 "Start a attempt to clear Tiberium crystals in a state."
 
  tiberium_coverup:0 "Coverup the crystals existence"
- tiberium_coverup_desc:0 "Quest down the existence of the tiberium crystals"
+ tiberium_coverup_desc:0 "Quest down the existence of the Tiberium crystals."
  tiberium_ongoing_coverup_flag:0 "Already running a coverup"
