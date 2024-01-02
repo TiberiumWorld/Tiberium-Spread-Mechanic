@@ -8,6 +8,9 @@ $pdxModPathName = Join-Path $hoiModPath $modName
 
 New-Item -itemtype Junction `
     -path "$hoiModPath" `
-    -name "$modName" `
+    -name "$modName`_DevBuild" `
     -value "$modPath" `
     -force #>$null 2>&1
+
+Copy-Item "$modPath\descriptor.mod" "$hoiModPath\$modName`_DevBuild.mod"
+(Get-Content "$hoiModPath\$modName`_DevBuild.mod") -replace ("remote_file_id.*", '') | Set-Content "$hoiModPath\$modName`_DevBuild.mod"
