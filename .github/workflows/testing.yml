@@ -1,0 +1,23 @@
+name: Testing
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+  push:
+    branches: main
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@master
+
+      - name: Check TODO
+        if: always()
+        run: bash tools/checkTodo.sh
+        continue-on-error: true
+
+      - name: Check for FIXME
+        if: always()
+        run: bash tools/checkFixme.sh
