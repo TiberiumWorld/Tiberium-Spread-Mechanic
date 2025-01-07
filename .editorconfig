@@ -1,0 +1,49 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+
+[*.gui]
+indent_style = tab
+indent_size = 4
+
+[tiberium_*.gui]
+indent_style = space
+indent_size = 4
+
+
+[*.gfx]
+indent_style = tab
+indent_size = 2
+
+[tiberium_*.gfx]
+indent_style = space
+indent_size = 2
+
+
+[*.txt]
+indent_style = tab
+indent_size = 4
+
+[tiberium_*.txt]
+indent_style = space
+indent_size = 4
+
+[Tiberium_*.txt]
+indent_style = space
+indent_size = 4
+
+
+[*.yml]
+charset = utf-8-bom
+indent_style = space
+indent_size = 2
