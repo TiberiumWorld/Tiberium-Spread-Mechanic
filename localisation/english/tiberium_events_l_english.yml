@@ -1,31 +1,29 @@
 ﻿l_english:
- tiberium_init.0.t:0 "Meteor impact near Tiber river in Italy"
- tiberium_init.0.desc:0 "A meteor impact has occurred in the state of Tuscany near the Tiber river. Scientists have located the impact and have rushed to the province to find out more. No individuals have been injured by the impact."
- tiberium_init.0.a:0 "Exciting! I wonder what they might find!"
+  tiberium_init.0.t:0 "Meteor impact near Tiber river in Italy"
+  tiberium_init.0.desc:0 "A meteor impact has occurred in the state of Tuscany near the Tiber river. Scientists have located the impact and have rushed to the province to find out more. No individuals have been injured by the impact."
+  tiberium_init.0.a:0 "Exciting! I wonder what they might find!"
 
- tiberium_init.1.t:0 "Crystal growth near metior impact"
- tiberium_init.1.desc:0 "Odd crystals have been discoverd growing for some kind of organic pods around the meteor impact. The crystals are green with a light green shine. Scientist are baffled and have not seen anything like this before and have named it Tiberium (Tiber-ium) after the river. "
- tiberium_init.1.a:0 "Intresting..."
+  tiberium_init.1.t:0 "Crystal growth near meteor impact"
+  tiberium_init.1.desc:0 "Odd crystals have been discoverd growing for some kind of organic pods around the meteor impact. The crystals are green with a light green shine. Scientist are baffled and have not seen anything like this before and have named it Tiberium (Tiber-ium) after the river. "
+  tiberium_init.1.a:0 "Interesting..."
 
- tiberium_init.2.t:0 "Strange mutations"
- tiberium_init.2.desc:0 "The scientists in the province of the meteor has reported strange tree like mutation on the local flora. These trees are spreading clouds of gas and crystals, scientists find this alarming but yet fascinating."
- tiberium_init.2.a:0 "Worrisome..."
+  tiberium_init.2.t:0 "Strange mutations"
+  tiberium_init.2.desc:0 "The scientists in the province of the meteor has reported strange tree like mutation on the local flora. These trees are spreading clouds of gas and crystals, scientists find this alarming but yet fascinating."
+  tiberium_init.2.a:0 "Worrisome..."
 
- tiberium_init.9.t:0 "Tiberium seems to be spreading"
- tiberium_init.9.desc:0 "Reports are coming in from across the region of Tuscany that the Tiberium crystals seems to be spreading. Strange threes seems to be the source of the spread. Scientists are looking in the phenomena."
- tiberium_init.9.a:0 "This cant be good..."
+  tiberium_init.9.t:0 "Tiberium seems to be spreading"
+  tiberium_init.9.desc:0 "Reports are coming in from across the region of Tuscany that the Tiberium crystals seems to be spreading. Strange threes seems to be the source of the spread. Scientists are looking in the phenomena."
+  tiberium_init.9.a:0 "This cant be good..."
 
- tiberium_event.1.t:0 "Our nation is in disaray!"
- tiberium_event.1.desc:0 "Our nation is in chaos and people are fleeing out of our nation due to the Tiberium crystal."
- tiberium_event.1.a:0 "We need to take action!"
+  tiberium_event.1.t:0 "Our nation is in disarray!"
+  tiberium_event.1.desc:0 "Our nation is in chaos and people are fleeing out of our nation due to the Tiberium crystal."
+  tiberium_event.1.a:0 "We need to take action!"
 
- tiberium_event.2.t:0 "[From.Root.GetName] taken over by Tiberium"
- tiberium_event.2.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
- tiberium_event.2.a:0 "Horrific!"
-
-
- tiberium_event.3.t:0 "Tiberium have been spoted within our border"
- tiberium_event.3.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
- tiberium_event.3.a:0 "Horrific!"
+  tiberium_event.2.t:0 "[From.Root.GetName] taken over by Tiberium"
+  tiberium_event.2.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
+  tiberium_event.2.a:0 "Horrific!"
 
 
+  tiberium_event.3.t:0 "Tiberium have been spotted within our border"
+  tiberium_event.3.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
+  tiberium_event.3.a:0 "Horrific!"
