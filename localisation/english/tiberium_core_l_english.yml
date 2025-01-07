@@ -1,4 +1,5 @@
-﻿l_english: tiberium_infestation_0:0 "Initial Tiberium Spread"
+﻿l_english:
+  tiberium_infestation_0:0 "Initial Tiberium Spread"
   tiberium_infestation_1:0 "Low Tiberium Infection"
   tiberium_infestation_2:0 "Major Tiberium Infestation"
   tiberium_infestation_3:0 "Heavy Tiberium Infestation"
@@ -10,3 +11,6 @@
   tiberium_infestation_state_4:0 "Extreme Tiberium Infestation"
 
   has_tiberium_infestation_country_tooltip:0 "Has any level of §YTiberium Infestation§! in country"
+
+  tiberium_cleared_state_tt:0 "§GTiberium will be cleared in state§!"
+  tiberium_lowered_state_tt:0 "§GTiberium amount will be reduced in state§!"

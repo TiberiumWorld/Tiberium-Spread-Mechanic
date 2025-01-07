@@ -22,8 +22,7 @@
   tiberium_event.2.t:0 "[From.Root.GetName] taken over by Tiberium"
   tiberium_event.2.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
   tiberium_event.2.a:0 "Horrific!"
-
-
+  
   tiberium_event.3.t:0 "Tiberium have been spotted within our border"
   tiberium_event.3.desc:0 "[From.Root.GetName] have completely succumbed to the Tiberium crystals. Strange mutated creatures rome the vast wasteland that is now remaining. And people are fleeing in panic."
   tiberium_event.3.a:0 "Horrific!"
