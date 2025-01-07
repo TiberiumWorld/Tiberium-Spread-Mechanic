@@ -32,7 +32,7 @@ country_event = {   # tiberium_grow.0 // check growth
             }
         }
         else_if = {
-            limit = { has_game_rule = { rule = tiberium_rule_growth option = EXTREAM } }
+            limit = { has_game_rule = { rule = tiberium_rule_growth option = EXTREME } }
             random_list = {
                 40 = { country_event = {id = tiberium_grow.1 days = 1 } }
                 60 = { }

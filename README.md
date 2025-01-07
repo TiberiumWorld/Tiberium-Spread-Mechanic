@@ -19,8 +19,8 @@ Tiberium Spread Mechanic are a open source tiberium spread system built to be ex
 | Icon | Name  | Options     |
 |------|-------|-------------| 
 | ![Arrival](https://github.com/TiberiumWorld/Tiberium-Spread-Mechanic/blob/main/gfx/game_rules/rule_astroid.png?raw=true) | Tiberium Arrival     | Random (The meteor will arrives some day within a 25 year period; unknown when.)<br>Start (The meteor will arrive at the start of the game.)*<br>1995 (The meteor will crash in to earth som day in 1995.)<br>Never (The meteor will never arrive; Why did you download this mod?)
-| ![Growth](https://github.com/TiberiumWorld/Tiberium-Spread-Mechanic/blob/main/gfx/game_rules/rule_growth.png?raw=true)   | Tiberium Growth Rate | Low (10%)<br>Medium (20%)*<br>High (40%)<br>Extream (60%) |
-| ![Spread](https://github.com/TiberiumWorld/Tiberium-Spread-Mechanic/blob/main/gfx/game_rules/rule_spread.png?raw=true)   | Tiberium Spread Rate | Low (20%)<br>Medium (30%)*<br>High (40%)<br>Extream (50%) |
+| ![Growth](https://github.com/TiberiumWorld/Tiberium-Spread-Mechanic/blob/main/gfx/game_rules/rule_growth.png?raw=true)   | Tiberium Growth Rate | Low (10%)<br>Medium (20%)*<br>High (40%)<br>Extreme (60%) |
+| ![Spread](https://github.com/TiberiumWorld/Tiberium-Spread-Mechanic/blob/main/gfx/game_rules/rule_spread.png?raw=true)   | Tiberium Spread Rate | Low (20%)<br>Medium (30%)*<br>High (40%)<br>Extreme (50%) |
 
 `*` = Default
 

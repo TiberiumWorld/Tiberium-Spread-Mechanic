@@ -38,9 +38,9 @@ tiberium_rule_growth = {
         desc = "TIB_RULE_OPTION_HIGH_GROWTH_DESC"
     }
     option = {
-        name = "EXTREAM"
-        text = "TIB_RULE_OPTION_EXTREAM"
-        desc = "TIB_RULE_OPTION_EXTREAM_GROWTH_DESC"
+        name = "EXTREME"
+        text = "TIB_RULE_OPTION_EXTREME"
+        desc = "TIB_RULE_OPTION_EXTREME_GROWTH_DESC"
     }
 }
 tiberium_rule_spread = {
@@ -63,8 +63,8 @@ tiberium_rule_spread = {
         desc = "TIB_RULE_OPTION_HIGH_SPREAD_DESC"
     }
     option = {
-        name = "EXTREAM"
-        text = "TIB_RULE_OPTION_EXTREAM"
-        desc = "TIB_RULE_OPTION_EXTREAM_SPREAD_DESC"
+        name = "EXTREME"
+        text = "TIB_RULE_OPTION_EXTREME"
+        desc = "TIB_RULE_OPTION_EXTREME_SPREAD_DESC"
     }
 }

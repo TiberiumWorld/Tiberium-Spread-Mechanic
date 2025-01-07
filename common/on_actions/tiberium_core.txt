@@ -38,7 +38,7 @@ on_actions = {
                     }
                 }
                 else_if = {
-                    limit = { has_game_rule = { rule = tiberium_rule_spread option = EXTREAM } }
+                    limit = { has_game_rule = { rule = tiberium_rule_spread option = EXTREME } }
                     random_list = {
                         40 = { country_event = {id = tiberium_spread.0 days = 7 } }
                         60 = { }
