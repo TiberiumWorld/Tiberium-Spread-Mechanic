@@ -1,24 +1,90 @@
+## Add State modifier 
 add_tiberium_infestation_state_modifier = { # Scope: State
-	if = {
+	if = { # state_0
 		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_0 } } }
 		add_dynamic_modifier = { modifier = tiberium_infestation_state_0 }
 	}
-	if = {
+	if = { # state_1
 		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_1 } } }
 		add_dynamic_modifier = { modifier = tiberium_infestation_state_1 }
 	}
-	if = {
+	if = { # state_2
 		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_2 } } }
 		add_dynamic_modifier = { modifier = tiberium_infestation_state_2 }
 	}
-	if = {
+	if = { # state_3
 		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_3 } } }
 		add_dynamic_modifier = { modifier = tiberium_infestation_state_3 }
 	}
-	if = {
+	if = { # state_4
 		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_4 } } }
 		add_dynamic_modifier = { modifier = tiberium_infestation_state_4 }
 	}
+
+	if = { # state_5
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_5 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_5 }
+	}
+	if = { # state_6
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_6 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_6 }
+	}
+	if = { # state_7
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_7 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_7 }
+	}
+	if = { # state_8
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_8 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_8 }
+	}
+	if = { # state_9
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_9 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_9 }
+	}
+
+	if = { # state_10
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_10 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_10 }
+	}
+	if = { # state_11
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_11 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_11 }
+	}
+	if = { # state_12
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_12 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_12 }
+	}
+	if = { # state_13
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_13 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_13 }
+	}
+	if = { # state_14
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_14 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_14 }
+	}
+
+	if = { # state_15
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_15 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_15 }
+	}
+	if = { # state_16
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_16 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_16 }
+	}
+	if = { # state_17
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_17 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_17 }
+	}
+	if = { # state_18
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_18 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_18 }
+	}
+	if = { # state_19
+		limit = { NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_19 } } }
+		add_dynamic_modifier = { modifier = tiberium_infestation_state_19 }
+	}
+
+
 	if = {
 		limit = {
 			OR = {
@@ -27,15 +93,35 @@ add_tiberium_infestation_state_modifier = { # Scope: State
 				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_2 } }
 				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_3 } }
 				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_4 } }
+
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_5 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_6 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_7 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_8 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_9 } }
+
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_10 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_11 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_12 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_13 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_14 } }
+
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_15 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_16 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_17 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_18 } }
+				NOT = { has_dynamic_modifier = { modifier = tiberium_infestation_state_19 } }
 			}
 		}
 		if = {
 			limit = { is_debug = yes }
-			log = "Tiberium INFO: Tiberium have appeard in the state of [This.GetName] in [This.Owner.GetName]"
+			log = "Tiberium INFO: Tiberium have appeared in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
 }
 
+
+## Add State infestation level
 add_tiberium_infestation_0 = { # Scope: State
 	add_tiberium_infestation_state_modifier = yes
 	
@@ -92,10 +178,180 @@ add_tiberium_infestation_4 = { # Scope: State
 	set_state_flag = tiberium_infestation_4_flag
 }
 
+add_tiberium_infestation_5 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_5 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_5_flag
+}
+add_tiberium_infestation_6 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_6 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_6_flag
+}
+add_tiberium_infestation_7 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_7 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_7_flag
+}
+add_tiberium_infestation_8 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_8 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_8_flag
+}
+add_tiberium_infestation_9 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_9 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_9_flag
+}
+
+add_tiberium_infestation_10 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_10 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_10_flag
+}
+add_tiberium_infestation_11 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_11 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_11_flag
+}
+add_tiberium_infestation_12 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_12 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_12_flag
+}
+add_tiberium_infestation_13 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_13 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_13_flag
+}
+add_tiberium_infestation_14 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_14 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_14_flag
+}
+
+add_tiberium_infestation_15 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_15 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_15_flag
+}
+add_tiberium_infestation_16 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_16 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_16_flag
+}
+add_tiberium_infestation_17 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_17 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_17_flag
+}
+add_tiberium_infestation_18 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_18 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_18_flag
+}
+add_tiberium_infestation_19 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_19 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_19_flag
+}
+
+
+## Clear Tiberium
 clr_tiberium_infestation = { # Scope: State
 	add_tiberium_infestation_state_modifier = yes
 
-	if = {
+	if = { # clear 0 (level 1)
 		limit = { has_state_flag = tiberium_infestation_0_flag }
 		remove_province_modifier = {
 			static_modifiers = { tiberium_infestation_0 }
@@ -105,7 +361,7 @@ clr_tiberium_infestation = { # Scope: State
 		}
 		clr_state_flag = tiberium_infestation_0_flag
 	}
-	else_if = {
+	else_if = { # clear 1
 		limit = { has_state_flag = tiberium_infestation_1_flag }
 		remove_province_modifier = {
 			static_modifiers = { tiberium_infestation_1 }
@@ -115,7 +371,7 @@ clr_tiberium_infestation = { # Scope: State
 		}
 		clr_state_flag = tiberium_infestation_1_flag
 	}
-	else_if = {
+	else_if = { # clear 2
 		limit = { has_state_flag = tiberium_infestation_2_flag }
 		remove_province_modifier = {
 			static_modifiers = { tiberium_infestation_2 }
@@ -125,7 +381,7 @@ clr_tiberium_infestation = { # Scope: State
 		}
 		clr_state_flag = tiberium_infestation_2_flag
 	}
-	else_if = {
+	else_if = { # clear 3
 		limit = { has_state_flag = tiberium_infestation_3_flag }
 		remove_province_modifier = {
 			static_modifiers = { tiberium_infestation_3 }
@@ -135,7 +391,7 @@ clr_tiberium_infestation = { # Scope: State
 		}
 		clr_state_flag = tiberium_infestation_3_flag
 	}
-	else_if = {
+	else_if = { # clear 4
 		limit = { has_state_flag = tiberium_infestation_4_flag }
 		remove_province_modifier = {
 			static_modifiers = { tiberium_infestation_4 }
@@ -145,8 +401,160 @@ clr_tiberium_infestation = { # Scope: State
 		}
 		clr_state_flag = tiberium_infestation_4_flag
 	}
+	else_if = { # clear 5 (level 2)
+		limit = { has_state_flag = tiberium_infestation_5_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_5 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_5_flag
+	}
+	else_if = { # clear 6
+		limit = { has_state_flag = tiberium_infestation_6_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_6 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_6_flag
+	}
+	else_if = { # clear 7
+		limit = { has_state_flag = tiberium_infestation_7_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_7 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_7_flag
+	}
+	else_if = { # clear 8
+		limit = { has_state_flag = tiberium_infestation_8_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_8 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_8_flag
+	}
+	else_if = { # clear 9
+		limit = { has_state_flag = tiberium_infestation_9_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_9 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_9_flag
+	}
+	else_if = { # clear 10 (level 3)
+		limit = { has_state_flag = tiberium_infestation_10_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_10 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_10_flag
+	}
+	else_if = { # clear 11
+		limit = { has_state_flag = tiberium_infestation_11_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_11 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_11_flag
+	}
+	else_if = { # clear 12
+		limit = { has_state_flag = tiberium_infestation_12_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_12 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_12_flag
+	}
+	else_if = { # clear 13
+		limit = { has_state_flag = tiberium_infestation_13_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_13 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_13_flag
+	}
+	else_if = { # clear 14
+		limit = { has_state_flag = tiberium_infestation_14_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_14 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_14_flag
+	}
+	else_if = { # clear 15 (level 4)
+		limit = { has_state_flag = tiberium_infestation_15_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_15 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_15_flag
+	}
+	else_if = { # clear 16
+		limit = { has_state_flag = tiberium_infestation_16_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_16 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_16_flag
+	}
+	else_if = { # clear 17
+		limit = { has_state_flag = tiberium_infestation_17_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_17 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_17_flag
+	}
+	else_if = { # clear 18
+		limit = { has_state_flag = tiberium_infestation_18_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_18 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_18_flag
+	}
+	else_if = { # clear 19
+		limit = { has_state_flag = tiberium_infestation_19_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_19 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_19_flag
+	}
 }
 
+
+## Set a tiberium level
 set_tiberium_infestation_0 = { # Scope: State
 	add_tiberium_infestation_state_modifier = yes
 	clr_tiberium_infestation = yes
@@ -208,6 +616,191 @@ set_tiberium_infestation_4 = { # Scope: State
 	set_state_flag = tiberium_infestation_4_flag
 }
 
+set_tiberium_infestation_5 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_5 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_5_flag
+}
+set_tiberium_infestation_6 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_6 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_6_flag
+}
+set_tiberium_infestation_7 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_7 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_7_flag
+}
+set_tiberium_infestation_8 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_8 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_8_flag
+}
+set_tiberium_infestation_9 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_9 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_9_flag
+}
+
+set_tiberium_infestation_10 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_10 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_10_flag
+}
+set_tiberium_infestation_11 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_11 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_11_flag
+}
+set_tiberium_infestation_12 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_12 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_12_flag
+}
+set_tiberium_infestation_13 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_13 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_13_flag
+}
+set_tiberium_infestation_14 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_14 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_14_flag
+}
+
+set_tiberium_infestation_15 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_15 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_15_flag
+}
+set_tiberium_infestation_16 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_16 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_16_flag
+}
+set_tiberium_infestation_17 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_17 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_17_flag
+}
+set_tiberium_infestation_18 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_18 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_18_flag
+}
+set_tiberium_infestation_19 = { # Scope: State
+	add_tiberium_infestation_state_modifier = yes
+	clr_tiberium_infestation = yes
+	
+	add_province_modifier = {
+		static_modifiers = { tiberium_infestation_19 }
+		province = {
+			all_provinces = yes
+		}
+	}
+	set_state_flag = tiberium_infestation_19_flag
+}
+
+
+## Increase or decrease
 increase_tiberium_infestation_level = { # Scope: State
 	if = {      # - > 0
 		limit = { 
@@ -313,9 +906,618 @@ increase_tiberium_infestation_level = { # Scope: State
 			log = "Tiberium INFO: Tiberium have grown from 3 to 4 in the state of [This.GetName] in [This.Owner.GetName]"
 		}
 	}
+	else_if = { # 4 > 5 # TODO: Create additional conditions for level increase
+		limit = { has_state_flag = tiberium_infestation_4_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_4 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_5 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_4_flag
+		set_state_flag = tiberium_infestation_5_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 4 to 5 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 5 > 6
+		limit = { has_state_flag = tiberium_infestation_5_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_5 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_6 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_5_flag
+		set_state_flag = tiberium_infestation_6_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 5 to 6 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 6 > 7
+		limit = { has_state_flag = tiberium_infestation_6_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_6 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_7 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_6_flag
+		set_state_flag = tiberium_infestation_7_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 6 to 7 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 7 > 8
+		limit = { has_state_flag = tiberium_infestation_7_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_7 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_8 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_7_flag
+		set_state_flag = tiberium_infestation_8_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 7 to 8 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 8 > 9
+		limit = { has_state_flag = tiberium_infestation_8_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_8 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_9 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_8_flag
+		set_state_flag = tiberium_infestation_9_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 8 to 9 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 9 > 10 # TODO: Create additional conditions for level increase
+		limit = { has_state_flag = tiberium_infestation_9_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_9 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_10 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_9_flag
+		set_state_flag = tiberium_infestation_10_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 9 to 10 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 10 > 11
+		limit = { has_state_flag = tiberium_infestation_10_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_10 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_11 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_10_flag
+		set_state_flag = tiberium_infestation_11_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 10 to 11 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 11 > 12
+		limit = { has_state_flag = tiberium_infestation_11_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_11 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_12 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_11_flag
+		set_state_flag = tiberium_infestation_12_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 11 to 12 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 12 > 13
+		limit = { has_state_flag = tiberium_infestation_12_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_12 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_13 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_12_flag
+		set_state_flag = tiberium_infestation_13_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 12 to 13 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 13 > 14
+		limit = { has_state_flag = tiberium_infestation_13_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_13 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_14 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_13_flag
+		set_state_flag = tiberium_infestation_14_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 13 to 14 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 14 > 15 # TODO: Create additional conditions for level increase
+		limit = { has_state_flag = tiberium_infestation_14_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_14 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_15 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_14_flag
+		set_state_flag = tiberium_infestation_15_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 14 to 15 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 15 > 16
+		limit = { has_state_flag = tiberium_infestation_14_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_14 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_15 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_14_flag
+		set_state_flag = tiberium_infestation_15_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 14 to 15 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 17 > 18
+		limit = { has_state_flag = tiberium_infestation_17_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_17 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_18 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_17_flag
+		set_state_flag = tiberium_infestation_18_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 17 to 18 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 18 > 19
+		limit = { has_state_flag = tiberium_infestation_18_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_18 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_19 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_18_flag
+		set_state_flag = tiberium_infestation_19_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have grown from 18 to 19 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
 }
 decrease_tiberium_infestation_level = { # Scope: State
-	if = {      # 4 > 3
+	if = {      # 19 > 18
+		limit = { has_state_flag = tiberium_infestation_19_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_19 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_18 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_19_flag
+		set_state_flag = tiberium_infestation_18_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 19 to 18 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 18 > 17
+		limit = { has_state_flag = tiberium_infestation_18_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_18 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_17 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_18_flag
+		set_state_flag = tiberium_infestation_17_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 18 to 17 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 17 > 16
+		limit = { has_state_flag = tiberium_infestation_17_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_17 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_16 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_17_flag
+		set_state_flag = tiberium_infestation_16_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 17 to 16 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 16 > 15
+		limit = { has_state_flag = tiberium_infestation_16_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_16 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_15 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_16_flag
+		set_state_flag = tiberium_infestation_15_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 16 to 15 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 15 > 14
+		limit = { has_state_flag = tiberium_infestation_15_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_15 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_14 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_15_flag
+		set_state_flag = tiberium_infestation_14_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 15 to 14 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 14 > 13
+		limit = { has_state_flag = tiberium_infestation_14_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_14 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_13 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_14_flag
+		set_state_flag = tiberium_infestation_13_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 14 to 13 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 13 > 12
+		limit = { has_state_flag = tiberium_infestation_13_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_13 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_12 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_13_flag
+		set_state_flag = tiberium_infestation_12_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 13 to 12 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 12 > 11
+		limit = { has_state_flag = tiberium_infestation_12_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_12 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_11 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_12_flag
+		set_state_flag = tiberium_infestation_11_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 12 to 11 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 11 > 10
+		limit = { has_state_flag = tiberium_infestation_11_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_11 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_10 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_11_flag
+		set_state_flag = tiberium_infestation_10_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 11 to 10 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 10 > 9
+		limit = { has_state_flag = tiberium_infestation_10_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_10 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_9 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_10_flag
+		set_state_flag = tiberium_infestation_9_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 10 to 9 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 9 > 8
+		limit = { has_state_flag = tiberium_infestation_9_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_9 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_8 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_9_flag
+		set_state_flag = tiberium_infestation_8_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 9 to 8 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 8 > 7
+		limit = { has_state_flag = tiberium_infestation_8_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_8 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_7 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_8_flag
+		set_state_flag = tiberium_infestation_7_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 8 to 7 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 7 > 6
+		limit = { has_state_flag = tiberium_infestation_7_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_7 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_6 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_7_flag
+		set_state_flag = tiberium_infestation_6_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 7 to 6 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 6 > 5
+		limit = { has_state_flag = tiberium_infestation_6_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_6 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_6 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_6_flag
+		set_state_flag = tiberium_infestation_5_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 6 to 5 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 5 > 4
+		limit = { has_state_flag = tiberium_infestation_5_flag }
+		remove_province_modifier = {
+			static_modifiers = { tiberium_infestation_5 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = { tiberium_infestation_4 }
+			province = {
+				all_provinces = yes
+			}
+		}
+		clr_state_flag = tiberium_infestation_5_flag
+		set_state_flag = tiberium_infestation_4_flag
+		IF = {
+			limit = { is_debug = yes }
+			log = "Tiberium INFO: Tiberium have decreased from 5 to 4 in the state of [This.GetName] in [This.Owner.GetName]"
+		}
+	}
+	else_if = { # 4 > 3
 		limit = { has_state_flag = tiberium_infestation_4_flag }
 		remove_province_modifier = {
 			static_modifiers = { tiberium_infestation_4 }
